@@ -1,18 +1,18 @@
 html {
-  background-color: white;
-  display: flex;
-  justify-content: space-evenly;
+  background-color: #11111b;
 }
 
 body {
-  background-color: #11111b;
-  display: inline;
-  justify-content: center;
+  
+width: 90%;
+margin: 0% auto;
+
+
   align-items: center;
 height: 100%;
-width: 90%;
-}
 
+}
+/*header*/
 header {
   display: flex;
   justify-content: space-around;
@@ -20,14 +20,19 @@ header {
   height: 50px;
   border: solid 1px rgb(94, 94, 116);
   border-radius: 40px;
-  margin: 2% 5%; 
+  margin: 2%;
   background-color: #27262b ;
  
 }
-.nav{
+/*posisionamiento de marca*/
+.branding {
+  display: flex;
+  height: 50%;  
+}
 
-  
-  
+/*menu navegador deplegoda horizontalmente*/
+.nav{
+color: white; 
   
 }
 ul{ 
@@ -55,13 +60,25 @@ li:hover{
   color:#4743fb;
 }
 
-.branding {
-  display: flex;
-  height: 50%;  
+/*botones telefono y mail al final del header*/
+.wsp, .msj{
+  background-color: #ffffff;
+  color: #4743fb;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  border:none;
+  margin: 2px  ;
 }
 
 
-p, h1
+/*main*/
+main {
+
+}
+
+/* etiqueta p y h1 con igual fuente y color afecta a todo el porfolio*/
+p, h1, strong
 {
 font-family: "Balsamiq Sans", sans-serif;
 font-weight: 100;
@@ -69,12 +86,15 @@ font-style: normal;
 color: white; 
 }
 
+
+/* hero*/
 .name {
   margin: 0px;
   font-size: 50px;
   padding: 2% 12%;
 }
 
+/*leyenda del hero*/
 .pText {
   font-size: 20px;
   text-wrap:wrap;
@@ -83,12 +103,14 @@ color: white;
   
 }
 
-i {
+/*iconos*/
+.fa-solid .fa-brands {
   font-family: FontAwesome;
   font-style: normal;
 
 }
 
+/*fuente de google fonts*/
 .material-symbols-outlined {
   font-variation-settings:
     'FILL' 0,
@@ -96,6 +118,8 @@ i {
     'GRAD' 0,
     'opsz' 48
 }
+
+/* bton flotante de mail*/
 
 .btn-mail {
   position: relative;
@@ -112,8 +136,8 @@ i {
   color: #4743fb;
 }
 
-main {}
 
+/*efecto del boton flotante*/
 .btn-mail:hover {
 
   background-color: #4743fb;
@@ -121,6 +145,8 @@ main {}
   cursor: pointer;
   color: #ffe600;
 }
+
+/*texto del heroe*/
 
 .textHero{
 display:flex;
@@ -130,15 +156,20 @@ border: solid 1px greenyellow;
   
 
 }
+
+/*contenedor del heroe*/
 .hero {
 display: flex;
   justify-content:space-between;
   align-content: center;
   height: 80vh;
+ 
   /*border: solid 1px rgb(94, 94, 116);*/
   
    
 }
+
+/*contenedor botones redes*/
 
 .redes {
   display: flex;
@@ -148,16 +179,9 @@ display: flex;
   height: 100px;
 }
 
-.wsp, .msj{
-  background-color: #ffffff;
-  color: #4743fb;
-  border-radius: 100%;
-  width: 30px;
-  height: 30px;
-  border:none;
-  margin: 2px;
-}
 
+
+/*iconos de los botones de redes*/
 .ig,
 .twitter,
 .be,
@@ -170,6 +194,8 @@ display: flex;
   border-radius: 100%;
   font-size: 15px;
 }
+
+/*imagen del hero*/
 .img {
   position: relative;  
   z-index: 1;
@@ -179,9 +205,51 @@ display: flex;
   justify-content: flex-end;
 }
 
+/*contenedor de la imagen del hero*/
 .imgHero{
   }
 
+.designer{
+color: white;
+flex-direction: column;
+  
+ 
+  width: 90%;
+  margin: 0% auto;
+}
+
+strong{
+  color:#4743fb ;
+  font-size: 30px;
+  }
+.skills{ 
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5%;  
+  background-color: #27262b ;  
+  align-items: center;  
+  border: solid 1px rgb(94, 94, 116);
+  border-radius: 40px;
+  
+}
+
+
+.pDiseño{
+  width: 50%;
+  font-size: 12px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h3{
+ width: 20%;
+}
+
+.flecha{
+  height: 20px;
+  
+}
+
+  
 
 
 /*footer*/
