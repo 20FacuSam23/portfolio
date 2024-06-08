@@ -3,87 +3,103 @@ html {
 }
 
 body {
-  
-width: 90%;
-margin: 0% auto;
-
-
+  width: 90%;
+  margin: 0% auto;
   align-items: center;
-height: 100%;
-
+  height: 100%;
 }
+
 /*header*/
 header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   height: 50px;
   border: solid 1px rgb(94, 94, 116);
   border-radius: 40px;
   margin: 2%;
-  background-color: #27262b ;
- 
+  background-color: #27262b;
+
 }
+
+
 /*posisionamiento de marca*/
 .branding {
   display: flex;
-  height: 50%;  
+  justify-content: space-around;
+  align-items: center;
+  height: 60%;
+
+}
+h1{margin: 0px 0px;}
+.subTit{
+  font-size: 10px;
+  margin: 0px 0px;
+}
+.img-brand{
+  height: 100%;
 }
 
 /*menu navegador deplegoda horizontalmente*/
-.nav{
-color: white; 
-  
-}
-ul{ 
-   display: flex;
-  justify-content: space-around;
-  font-size: 10px;  
+.nav {
+  display: flex;
+  justify-content: start;
+  text-align:initial;
+  font-size: 15px;
+  color: white;
+
 }
 
-li{
-  cursor:pointer;
-    margin: 10%;
-    width: 15%;
-  list-style:none;
-  transition: 2s;
-  display:flex;
-  text-justify:distribute;
-  align-items: center;
-  font-family: "Balsamiq Sans", sans-serif;
-font-weight: 100;
-font-style: normal;
-color: white; 
+a {
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 2%;
+  list-style: none;
+  transition: 1s;
+  display: flex;
+  justify-content:space-evenly;
+  align-items:baseline;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: white;
 }
-li:hover{
+
+a:hover {
   background-color: white;
-  color:#4743fb;
+  color: #4743fb;
+  width: 50px;
+  border: 2px solid white;
+  
 }
 
 /*botones telefono y mail al final del header*/
-.wsp, .msj{
+.wsp,
+.msj {
   background-color: #ffffff;
   color: #4743fb;
   border-radius: 100%;
   width: 30px;
   height: 30px;
-  border:none;
-  margin: 2px  ;
+  border: none;
+  margin: 2px;
 }
 
 
 /*main*/
-main {
-
-}
+main {}
 
 /* etiqueta p y h1 con igual fuente y color afecta a todo el porfolio*/
-p, h1, strong
-{
-font-family: "Balsamiq Sans", sans-serif;
-font-weight: 100;
-font-style: normal;
-color: white; 
+p,
+h1,
+strong,
+h3,
+.tituloDesigner {
+  font-family: "Balsamiq Sans", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: white;
 }
 
 
@@ -97,17 +113,15 @@ color: white;
 /*leyenda del hero*/
 .pText {
   font-size: 20px;
-  text-wrap:wrap;
-  text-align:justify;  
+  text-wrap: wrap;
+  text-align: justify;
   padding: 2% 12%;
-  
 }
 
 /*iconos*/
-.fa-solid .fa-brands {
+i {
   font-family: FontAwesome;
   font-style: normal;
-
 }
 
 /*fuente de google fonts*/
@@ -124,56 +138,58 @@ color: white;
 .btn-mail {
   position: relative;
   z-index: 1;
-  border-style: none;
-  background-color: #ffffff;
+  border-style: none; 
   height: 80px;
   width: 80px;
   border-radius: 50%;
   z-index: 2;
-  translate: 300px 400px;
-  transition: 5s;
-  font-size: 150%;
+  translate: 45px 150px;  
+  font-size: 150%;  
+}
+.btn-white{
+  transition: 2s;
+  font-family: FontAwesome;
+  background-color: #ffffff;
   color: #4743fb;
 }
 
 
 /*efecto del boton flotante*/
-.btn-mail:hover {
-
+.btn-white:hover  {
   background-color: #4743fb;
   font-size: 8;
-  cursor: pointer;
+  cursor: pointer; 
   color: #ffe600;
 }
 
 /*texto del heroe*/
 
-.textHero{
-display:flex;
-justify-content: baseline;
-border: solid 1px greenyellow;
-  
-  
-
+.textHero {
+  display: flex;
+  justify-content: baseline;
+  border: solid 1px greenyellow;
 }
 
 /*contenedor del heroe*/
 .hero {
-display: flex;
-  justify-content:space-between;
-  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
   height: 80vh;
- 
+
   /*border: solid 1px rgb(94, 94, 116);*/
-  
-   
+
+
 }
 
 /*contenedor botones redes*/
 
 .redes {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   padding: 0% 0%;
   width: 100%;
   height: 100px;
@@ -185,7 +201,7 @@ display: flex;
 .ig,
 .twitter,
 .be,
-.bbb  {
+.bbb {
   color: white;
   height: 30px;
   width: 30px;
@@ -195,61 +211,88 @@ display: flex;
   font-size: 15px;
 }
 
-/*imagen del hero*/
-.img {
+/*imagen del hero
+.img{
+  object-fit: cover;
+  width:80%;
+  height:80%;
   position: relative;  
-  z-index: 1;
-  width: 100%;
-  height: 80%; 
+  z-index: 1; 
    display:flex;
-  justify-content: flex-end;
+  
+}
+*/
+/*contenedor de la imagen del hero*/
+.imgHero {
+  background-image: url('../img/pil_violet.svg');
+  background-size: 300%;
+  background-repeat: no-repeat; 
+
+  height: 400px;
+  width: 400px;
+  background-size: 100% 100%;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+
+}
+@media screen and (max-width: 850px) {
+  .imgHero{
+      display:none;
+  }
 }
 
-/*contenedor de la imagen del hero*/
-.imgHero{
-  }
 
-.designer{
-color: white;
-flex-direction: column;
-  
- 
+/*seccion designer skills*/
+.designer {
+  color: white;
+  flex-direction: column;
+
   width: 90%;
   margin: 0% auto;
 }
 
-strong{
-  color:#4743fb ;
+.tituloDesigner {
+  text-align: center;
+  font-size: 20px;
+}
+
+strong {
+  color: #4743fb;
   font-size: 30px;
-  }
-.skills{ 
+}
+
+.skills {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  margin: 5%;  
-  background-color: #27262b ;  
-  align-items: center;  
+  margin: 5% 0%;
+  background-color: #27262b;
+  align-items: center;
   border: solid 1px rgb(94, 94, 116);
   border-radius: 40px;
-  
 }
 
 
-.pDiseño{
+.pDiseño {
   width: 50%;
   font-size: 12px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-h3{
- width: 20%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.flecha{
+h3 {
+  width: 20%;
+}
+
+.flecha {
   height: 20px;
-  
 }
 
-  
+
 
 
 /*footer*/
