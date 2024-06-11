@@ -7,7 +7,7 @@
     <link href="css/estilos.css" rel="stylesheet">
     <link href="css//normalize.css" rel="stylesheet">
     <title>Document</title>
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -375,15 +375,15 @@
                
                
             </article>
-            <article class="ejemplos">
-                <div class="col1">
+            <article id="#ejemplos" class="ejemplos">
+                <div id="#col1" class="col1">
                 <img class="img-eje" src="/img/resentWorkImg1.png" alt="">
                
                <img class="img-eje" src="/img/attache.png" alt="">
                
              
             </div>
-            <div class="col2">
+            <div id="#col2" class="col2">
                 <img class="img-eje" src="/img/carrito.png" alt="">
              
                <img class="img-eje" src="/img/nutProduct.png" alt="">
@@ -393,23 +393,32 @@
             </article>
         </section>
         <section class="aboutMe">
-            <article class="form-about">
-                <div class="intro-about">
+            <article id="#fo" class="fo">
+                <div id="#ia"class="ia">
                 <h3>¡Vamos a trabajar juntos!                    </h3>
                 <p>Diseño y codifico cosas maravillosamente simples y amo lo que hago. ¡Así de simple!</p>
             </div>
-            <input class="fn" type="text">
-            <input class="ln" type="text">
-            <input class="ea" type="text">
-            <input class="pn" type="text">
-            <input class="cs" type="text">
-            <input class="ym" type="text">            
-        <button class="btn-about"></button>
+            <input id="#fn"class="fn" type="text" value="Nombre">
+            <input id="#ln"class="ln" type="text" value="Apellido">
+            <input id="#ea"class="ea" type="text" value="Email">
+            <input id="#pn"class="pn" type="text" value="Telefono">
+            <select id="#cs"class="cs" name="select" value="Seleccionar servicio">
+                <option value="value1">Seleccionar Servicios</option>
+                <option value="value2" selected>Scrum</option>
+                <option value="value3">DevOps</option>
+                <option value="value4">Diseño</option>
+              </select>          
+            <input id="#ym"class="ym" type="text" value="Dejanos un Mensaje">            
+        <button id="#bt" class="bt" >Enviar</button>
         </article>
             <article class="contact-about">
-                <div><i><p></p><i class="fa-solid fa-phone"></i><strong>Telefono</strong></div>
-                <div><i><p></p><i class="fa-solid fa-envelope"></i><strong>Email</strong></div>
-                <div><i><p></p></i><strong>Dirección</strong></div>
+                <div class="contact"><span class="material-symbols-outlined">
+                    call
+                    </span><div class="col-contact"><p>Tellefono</p><strong>+54 9 343 706-8045</strong></div></div>
+                <div class="contact"><span class="material-symbols-outlined">
+                    mail
+                    </span><div class="col-contact"><p>e-mail</p><strong>facusamel@gmail.com</strong></div></div>
+                <div class="contact"><span class="material-symbols-outlined">location_on</span><div class="col-contact"><p>Localización</p><strong>Paraná, Entre Ríos</strong></div></div>
             </article>
         </section>
     </main>
