@@ -99,7 +99,7 @@ h1 {
 
   .nav,
   .wsp,
-  .msj {
+  .msj, .ejemplos {
     display: none;
   }
 }
@@ -157,13 +157,13 @@ h3, h2,
 /* hero*/
 .name {
   margin: 0px;
-  font-size: 50px;
+  font-size: 70px;
   padding: 2% 12%;
 }
 
 /*leyenda del hero*/
 .pText {
-  font-size: 20px;
+  font-size: 30px;
   text-wrap: wrap;
   text-align: justify;
   padding: 2% 12%;
@@ -189,7 +189,7 @@ i {
   width: 80px;
   border-radius: 50%;
   z-index: 2;
-  translate: 45px 150px;
+  translate: 60px 250px;
   font-size: 150%;
 }
 
@@ -204,9 +204,11 @@ i {
 /*efecto del boton flotante*/
 .btn-white:hover {
   background-color: var(--hero-bg-color);
-  font-size: 8;
-  cursor: pointer;
+  font-size: 8; 
   color: white;
+}
+.btn{
+  cursor: pointer;
 }
 
 /*texto del heroe*/
@@ -215,17 +217,18 @@ i {
   display: flex;
   justify-content: baseline;
   border: solid 1px white;
+  margin-right: 20px;
 }
 
 /*contenedor del heroe*/
 .hero {
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: space-around;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: stretch;
+ display: flex; 
+  align-content:flex-start;
+  justify-content: space-between;
+   
+
   height: 80vh;
+  width: 100%;
 
   /*border: solid 1px rgb(94, 94, 116);*/
 
@@ -250,12 +253,12 @@ i {
 .be,
 .bbb {
   color: white;
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   background-color: var(--hero-bg-color);
   border-style: none;
   border-radius: 100%;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 /*imagen del hero
@@ -267,6 +270,7 @@ i {
   z-index: 1; 
    display:flex;
   
+   
 }
 */
 /*contenedor de la imagen del hero*/
@@ -274,18 +278,15 @@ i {
   background-image: url('../img/pil_violet.svg');
   background-size: 300%;
   background-repeat: no-repeat;
-
-  height: 400px;
-  width: 400px;
+  height: 600px;
+  width: 600px;
   background-size: 100% 100%;
-
   flex-direction: row;
   flex-wrap: wrap;
   align-content: space-around;
   display: flex;
   justify-content: space-evenly;
   align-items: stretch;
-
 }
 
 @media screen and (max-width: 850px) {
@@ -300,7 +301,7 @@ i {
   color: white;
   flex-direction: column;
   width: 80%;
-  margin: 0% auto;
+  margin: 10% auto;
 }
 
 .tituloDesigner {
@@ -642,8 +643,9 @@ font-size: 15px;
 .aboutMe{
   display: flex;
   justify-content: flex-start;
-  margin-left: 10%;
-  width: 100%;
+  flex-wrap: wrap;
+  margin-left: 5%;
+ 
   height: 100%;
 }
 
@@ -657,8 +659,8 @@ font-size: 15px;
   border-width: 1px;
   border-style: outset; 
   background-color: #272727;
-width: 40%;
-height: 500px;
+width: 90vh;
+height: 100vh;
 
 }
 
@@ -755,6 +757,7 @@ grid-area: ln;
   
 }
 .ym{
+ text-align: center;
   height: 20%;
 }
  
@@ -785,8 +788,8 @@ grid-area: ln;
   display:flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  width: 100%;
-  margin: 20%;
+  width: 60%;
+  margin: 10%;
  
 
 }
@@ -794,16 +797,31 @@ grid-area: ln;
   color:#c7c7c7;
   font-size: 70%;
 }
-span{
+.contact span{
   text-align: center;
   align-items: center;
+  width: 60px;
+  height: 60px;
+  font-size: 40px
 }
 
+
+
+
 .contact-about{
-display: block;
-justify-content:center
+  display:  flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-content: flex-start;
+  
+  width: 40%;
+height: 100vh;
+
+
 }
 .contact strong{
+  font-size:110%;
   color:#cbcbcb;
 }
 
