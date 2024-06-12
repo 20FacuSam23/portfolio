@@ -21,33 +21,34 @@
 
 <body>
     <header>
-        <article class="branding">
+        <div class="branding" id="inicio">
             <img src="img/img-brand.png" class="img-brand" alt="">
-            <section>
-                <h1>Facundo</h1>
+            <div>
+                <h1 class="h1">Facundo</h1>
                 <p class="subTit">Aragón</p>
-        </article>
-        <article class="nav">
-            <a href="#inicio">Inicio</a>
+           </div>
+        </div>
+        <div class="nav">
+            <a href="#diseño">Diseño</a>
             <a href="#sobreMi">Sobre mi</a>
-            <a href='#accesorios'>Accesorios</a>
+            <a href='#accesorios'>Habilidades</a>
             <a href='#proyectos'>Proyectos</a>
-            <a href='#contactos'>Contacto</a>
-        </article>
-        <article>
+            <a href='#contacto'>Contacto</a>
+        </div>
+        <div>
             <button class="btn btn-white wsp"><i class="fa-solid fa-phone"></i></button>
             <button class="btn btn-white msj"><i class="fa-solid fa-envelope"></i></button>
-        </article>
-        <article class="collapse">
-            <section>
+        </div>
+        <div class="collapse">
+            <div>
                 <button href="#menu-collapse" class="btn btn-collapse">
                     <a href="#sobreMi">Sobre mi</a>
                     <a href='#accesorios'>Accesorios</a>
                     <a href='#proyectos'>Proyectos</a>
                     <a href='#contactos'>Contacto</a></button>
-            </section>
+            </div>
 
-        </article>
+        </div>
 
     </header>
     <main>
@@ -69,7 +70,7 @@
             </article>
         </section>
         <section class="designer">
-            <article id="inicio" class="tituloDesigner">Diseño / Herramientas para desrrollar</article>
+            <article id="diseño" class="tituloDesigner">Diseño / Herramientas para desrrollar</article>
             <article class="diseño"><strong>01</strong>
                 <h3>UI/UX</h3>
                 <p class="pDiseño">El diseño UX se centra en crear una experiencia de usuario fluida y significativa al
@@ -96,7 +97,7 @@
         </section>
 
 
-        <section class="edu-exp">
+        <section id="sobreMi" class="edu-exp">
             <div class="grid-eYe" id="grid-eYe">
                 <div id="#edu">
                     <article class="cont-title-edu">
@@ -366,7 +367,7 @@
             </section>
 
         </section>
-        <section class="works">
+        <section id="proyectos" class="works">
             <article>
                 <h2>Trabajos Recientes</h2>
                 <p>"Plasmamos sus ideas y, por tanto, sus deseos en forma de un proyecto web único que le inspirará a
@@ -394,7 +395,7 @@
                 </div>
             </article>
         </section>
-        <section class="aboutMe">
+        <section id="contacto" class="aboutMe">
             <article id="#fo" class="fo">
                 <div id="#ia" class="ia">
                     <h3>¡Vamos a trabajar juntos! </h3>
@@ -435,12 +436,30 @@
                 </div>
             </article>
         </section>
+        <section class="isologotipo">
+            <img src="img/img-brand.png" class="img-brand" alt="">
+            <div>
+                <p class="h1">Facundo</p>
+                <p class="subTit">Aragón</p>
+            </div>
+            </section>
     </main>
-    <!-- <section>
-        <h2 class="linea"><span>Titulo</span></h2>
--->
+
     </section>
-    <footer>footer</footer>
+    <footer> 
+        <section class="copyright">
+        <i class="fa-regular fa-copyright"></i> 
+        <p>2025 Todos los derechos reservados por Aragón Facundo</p>
+        </section>
+        <section class="nav-footer">
+        <a href="#inicio">Inicio</a>
+        <a href="#diseño">Diseño</a>
+        <a href="#sobreMi">Sobre mi</a>
+        <a href='#accesorios'>Habilidades</a>
+        <a href='#proyectos'>Proyectos</a>
+        <a href='#contacto'>Contacto</a>
+    </section>
+</footer>
 </body>
 
 
