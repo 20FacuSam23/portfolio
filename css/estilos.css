@@ -252,7 +252,7 @@ i {
 .ig,
 .twitter,
 .be,
-.bbb {
+.bbb, .git {
   color: white;
   height: 40px;
   width: 40px;
@@ -556,7 +556,7 @@ h4 {
   font-size: 5px;
   border-radius: 100px;
   background-color: #4743fb;
-  width: 90%;
+
 }
 
 .relleno p {
@@ -566,6 +566,82 @@ h4 {
   padding: 1px;
   align-items: center;
   margin-left: 10%;
+}
+
+
+.relleno-bar-figma{
+  background-color: #e4c82d;
+  width: 30%;
+}
+
+.relleno-bar-angular{
+  background-color: #e4c82d;
+  width: 30%;
+}
+
+.relleno-bar-cSharp{
+  background-color: #e4c82d;
+  width: 40%;
+}
+
+.relleno-bar-css3{
+  background-color: #e4c82d;
+  width: 30%;
+}
+
+.relleno-bar-github{
+  background-color: #e4c82d;
+  width: 30%;
+}
+
+.relleno-bar-html-5{
+  background-color: #94f328;
+  width: 40%;
+}
+
+.relleno-ar-ilustrator{
+  background-color: #e4c82d;
+  width: 30%;
+}
+
+.relleno-bar-js{
+  background-color: #02c3fd;
+  width: 50%;
+}
+
+.relleno-bar-netbeans{
+  background-color: #e4c82d;
+  width: 30%;
+}
+
+.relleno-bar-photoshop{
+  background-color: #e4c82d;
+  width: 30%;
+}
+
+.relleno-bar-scrum{
+  background-color: #124be7;
+  width: 60%;
+}
+
+.relleno-bar-visual{
+  background-color: #02c3fd;
+  width: 50%;
+}
+
+.relleno-ar-premier{
+  background-color: #124be7;
+  width: 60%;
+}
+.relleno-bar-visualCode{
+  background-color: #02c3fd;
+  width: 50%;
+}
+
+.relleno-bar-workbench{
+  background-color: #dff708;
+  width: 20%;
+
 }
 
 /*zona works*/
