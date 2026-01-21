@@ -1,0 +1,160 @@
+/* ===== RESET BASE ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+  line-height: 1.5;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #020617;
+  border-radius: 0 0 20px 20px;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  background: #38bdf8;
+  color: #020617;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.menu-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.nav {
+  display: none;
+}
+
+/* ===== HERO ===== */
+.hero {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-avatar img {
+  width: 220px;
+  border-radius: 50%;
+}
+
+/* ===== WORKS ===== */
+.works {
+  padding: 2rem 1.5rem;
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.filters button {
+  background: #020617;
+  color: white;
+  border: 1px solid #334155;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: #020617;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  padding: 2rem 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+.form input,
+.form textarea {
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.form button {
+  padding: 0.8rem;
+  background: #38bdf8;
+  color: #020617;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* ===== FLOATING BUTTON ===== */
+.floating-btn {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: #38bdf8;
+  color: #020617;
+  border: none;
+  padding: 1rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 768px) {
+
+  .menu-btn {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
