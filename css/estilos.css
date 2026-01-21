@@ -274,123 +274,149 @@ h1,
 /* ============= EDUCACIÓN Y EXPERIENCIA ============= */
 .edu-exp {
   background-color: #090828;
-  padding: 4rem 2rem;
   width: 100%;
+  padding: 4rem 0;
 }
 
 .grid-eYe {
+  font-family: var(--hero-font-family);
   display: grid;
+  grid-template-areas: "edu exp";
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-column-gap: 0px;
+  grid-row-gap: 10px;
+  width: 80%;
   max-width: 1200px;
   margin: 0 auto;
+  color: #5f6071;
   background-color: #21203f;
   border: 1px solid #5f6071;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 2rem;
 }
 
-.edu-section,
+.edu-section {
+  grid-area: edu;
+}
+
 .exp-section {
+  grid-area: exp;
+  border-left: 1px solid #46465d;
+}
+
+.cont-title-edu {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.cont-title-exp {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .titulo-edu,
 .titulo-exp {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  border-bottom: 1px solid #46465d;
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
+  border-bottom: solid 1px #46465d;
+  height: 80px;
+  width: 90%;
+  font-size: 20px;
 }
 
 .titulo-edu h2,
 .titulo-exp h2 {
   color: white;
-  font-size: 1.5rem;
   margin: 0;
 }
 
 .fa-graduation-cap,
 .fa-briefcase {
-  background-color: var(--hero-bg-color);
-  color: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  font-size: 20px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  margin: 0px 10px;
+  background-color: var(--hero-bg-color);
+  border-radius: 100%;
+  color: white;
 }
 
 .formacion,
 .trayectoria {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  margin-left: 30px;
 }
 
-.edu,
-.exp {
-  border-left: 2px solid #46465d;
-  padding-left: 2rem;
-  margin-left: 1rem;
-  position: relative;
-}
-
-.primer-contenedor {
-  margin-top: 1rem;
-}
-
-.ultimo-contenedor {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.eve-time-line {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.eve-time-line .fa-circle {
-  position: absolute;
-  left: -8px;
+.edu {
+  border-bottom: solid 1px #46465d;
+  border-left: solid 1px #46465d;
+  margin-left: 30px;
+  width: 80%;
   color: #46465d;
-  font-size: 0.8rem;
+  font-family: var(--hero-font-family);
 }
 
-.eve-time-line .fa-circle.presente {
-  color: var(--hero-bg-color);
-}
-
-.eve-time-line h4 {
-  background-color: #2a2942;
-  border: 1px solid #46465d;
-  padding: 0.4rem 0.8rem;
-  border-radius: 5px;
-  color: #9ca3af;
-  font-size: 0.9rem;
-  margin: 0;
-  font-weight: normal;
+.exp {
+  border-bottom: solid 1px #46465d;
+  border-left: solid 1px #46465d;
+  margin-left: 30px;
+  width: 80%;
+  color: #46465d;
 }
 
 .edu p,
 .exp p {
+  margin-top: 10px;
+  margin-left: 2%;
+  width: 70%;
   color: #cbcdcd;
-  margin: 0.5rem 0;
-  font-size: 1rem;
+}
+
+.primer-contenedor {
+  margin-top: 20px;
+}
+
+.ultimo-contenedor {
+  border-bottom: none;
+}
+
+.presente {
+  color: var(--hero-bg-color);
 }
 
 .detalle {
-  color: #9ca3af !important;
-  font-size: 0.85rem !important;
-  margin-bottom: 1.5rem !important;
+  font-size: 10px;
+  padding-bottom: 10%;
 }
+
+.eve-time-line {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  align-content: center;
+}
+
+.eve-time-line h4 {
+  padding: 2%;
+  border: solid 1px #8c8d94;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: transparent;
+  color: #8c8d94;
+  font-size: 0.9rem;
+  margin: 0;
+  font-weight: normal;
+  border-radius: 5px;
+}
+
+.fa-circle {
+  margin: -2%;
+  width: 30px;
+  font-size: 0.8rem;
+}
+
+/* ============= SKILLS ============= */
 
 /* ============= SKILLS ============= */
 .skills {
@@ -843,9 +869,30 @@ footer {
   }
 
   .grid-eYe {
+    grid-template-areas: 
+      "edu"
+      "exp";
     grid-template-columns: 1fr;
-    gap: 2rem;
+    width: 90%;
     padding: 1.5rem;
+  }
+
+  .exp-section {
+    border-left: none;
+    border-top: 1px solid #46465d;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .cont-title-edu {
+    justify-content: flex-start;
+  }
+
+  .titulo-edu,
+  .titulo-exp {
+    width: 100%;
+    height: auto;
+    padding-bottom: 1rem;
   }
 
   .titulo-edu h2,
@@ -858,6 +905,11 @@ footer {
     width: 45px;
     height: 45px;
     font-size: 1.1rem;
+  }
+
+  .edu,
+  .exp {
+    width: 90%;
   }
 
   .skills,
@@ -985,26 +1037,38 @@ footer {
   /* Educación y Experiencia más compacto en móvil pequeño */
   .grid-eYe {
     padding: 1rem;
+    width: 95%;
   }
 
   .edu,
   .exp {
-    padding-left: 1.5rem;
-    margin-left: 0.5rem;
+    padding-left: 1rem;
+    margin-left: 15px;
+    width: 85%;
+  }
+
+  .formacion,
+  .trayectoria {
+    margin-left: 15px;
   }
 
   .eve-time-line h4 {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     padding: 0.3rem 0.6rem;
   }
 
   .edu p,
   .exp p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    width: 90%;
   }
 
   .detalle {
-    font-size: 0.8rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  .fa-circle {
+    width: 20px;
   }
 
   .skills h2,
@@ -1066,4 +1130,4 @@ footer {
     height: 50px;
     font-size: 1.2rem;
   }
-    }
+  }
