@@ -275,43 +275,42 @@ h1,
 .edu-exp {
   background-color: #090828;
   width: 100%;
-  padding: 4rem 0;
+  padding: 2% 0%;
 }
 
-.grid-eYe {
+#grid-eYe {
   font-family: var(--hero-font-family);
   display: grid;
   grid-template-areas: "edu exp";
+  grid-template-rows: 100% 1fr 1fr 100%;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 10px;
   width: 80%;
-  max-width: 1200px;
-  margin: 0 auto;
   color: #5f6071;
   background-color: #21203f;
   border: 1px solid #5f6071;
   border-radius: 10px;
+  height: 100%;
+  margin: 2% auto;
   padding: 2rem;
 }
 
-.edu-section {
+div#edu {
   grid-area: edu;
 }
 
-.exp-section {
+div#exp {
   grid-area: exp;
-  border-left: 1px solid #46465d;
 }
 
-.cont-title-edu {
-  display: flex;
-  justify-content: flex-end;
+.lin {
+  border-left: solid 1px #46465d;
 }
 
 .cont-title-exp {
   display: flex;
-  justify-content: flex-start;
+  justify-content: start;
 }
 
 .titulo-edu,
@@ -324,29 +323,15 @@ h1,
   font-size: 20px;
 }
 
+.cont-title-edu {
+  display: flex;
+  justify-content: end;
+}
+
 .titulo-edu h2,
 .titulo-exp h2 {
   color: white;
   margin: 0;
-}
-
-.fa-graduation-cap,
-.fa-briefcase {
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 50px;
-  margin: 0px 10px;
-  background-color: var(--hero-bg-color);
-  border-radius: 100%;
-  color: white;
-}
-
-.formacion,
-.trayectoria {
-  margin-left: 30px;
 }
 
 .edu {
@@ -366,10 +351,8 @@ h1,
   color: #46465d;
 }
 
-.edu p,
 .exp p {
   margin-top: 10px;
-  margin-left: 2%;
   width: 70%;
   color: #cbcdcd;
 }
@@ -386,9 +369,30 @@ h1,
   color: var(--hero-bg-color);
 }
 
+.edu p {
+  margin-left: 2%;
+  width: 70%;
+  color: #cbcdcd;
+}
+
 .detalle {
   font-size: 10px;
   padding-bottom: 10%;
+}
+
+h4 {
+  padding: 2%;
+  border: solid 1px #8c8d94;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0.5rem 0;
+  background-color: transparent;
+  color: #8c8d94;
+  border-radius: 5px;
+}
+
+.fa-circle {
+  margin: -2%;
+  width: 30px;
 }
 
 .eve-time-line {
@@ -398,22 +402,18 @@ h1,
   align-content: center;
 }
 
-.eve-time-line h4 {
-  padding: 2%;
-  border: solid 1px #8c8d94;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: transparent;
-  color: #8c8d94;
-  font-size: 0.9rem;
-  margin: 0;
-  font-weight: normal;
-  border-radius: 5px;
-}
-
-.fa-circle {
-  margin: -2%;
-  width: 30px;
-  font-size: 0.8rem;
+.fa-graduation-cap,
+.fa-briefcase {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  margin: 0px 10px;
+  background-color: var(--hero-bg-color);
+  border-radius: 100%;
+  color: white;
 }
 
 /* ============= SKILLS ============= */
@@ -868,7 +868,7 @@ footer {
     padding: 2rem 1rem;
   }
 
-  .grid-eYe {
+  #grid-eYe {
     grid-template-areas: 
       "edu"
       "exp";
@@ -877,7 +877,7 @@ footer {
     padding: 1.5rem;
   }
 
-  .exp-section {
+  .lin {
     border-left: none;
     border-top: 1px solid #46465d;
     padding-top: 1.5rem;
@@ -891,25 +891,6 @@ footer {
   .titulo-edu,
   .titulo-exp {
     width: 100%;
-    height: auto;
-    padding-bottom: 1rem;
-  }
-
-  .titulo-edu h2,
-  .titulo-exp h2 {
-    font-size: 1.3rem;
-  }
-
-  .fa-graduation-cap,
-  .fa-briefcase {
-    width: 45px;
-    height: 45px;
-    font-size: 1.1rem;
-  }
-
-  .edu,
-  .exp {
-    width: 90%;
   }
 
   .skills,
@@ -1035,24 +1016,18 @@ footer {
   }
 
   /* Educación y Experiencia más compacto en móvil pequeño */
-  .grid-eYe {
+  #grid-eYe {
     padding: 1rem;
     width: 95%;
   }
 
   .edu,
   .exp {
-    padding-left: 1rem;
-    margin-left: 15px;
-    width: 85%;
-  }
-
-  .formacion,
-  .trayectoria {
+    width: 90%;
     margin-left: 15px;
   }
 
-  .eve-time-line h4 {
+  h4 {
     font-size: 0.75rem;
     padding: 0.3rem 0.6rem;
   }
@@ -1060,15 +1035,10 @@ footer {
   .edu p,
   .exp p {
     font-size: 0.85rem;
-    width: 90%;
   }
 
   .detalle {
     font-size: 0.75rem !important;
-  }
-
-  .fa-circle {
-    width: 20px;
   }
 
   .skills h2,
@@ -1130,4 +1100,4 @@ footer {
     height: 50px;
     font-size: 1.2rem;
   }
-  }
+}
