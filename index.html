@@ -1,685 +1,326 @@
-:root {
-  --hero-bg-color: #4743fb;
-  --hero-text-color: white;
-  --hero-font-family: "Balsamiq Sans", sans-serif;
-  --dark-bg: #11111b;
-  --card-bg: #27262b;
-  --border-color: #5e5e74;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  background-color: var(--dark-bg);
-  scroll-behavior: smooth;
-}
-
-body {
-  width: 100%;
-  margin: 0 auto;
-  font-family: system-ui, -apple-system, sans-serif;
-  color: white;
-  line-height: 1.6;
-}
-
-/* ============= HEADER ============= */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  border: solid 1px var(--border-color);
-  border-radius: 40px;
-  margin: 2%;
-  background-color: var(--card-bg);
-}
-
-.branding {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.logo {
-  background: var(--hero-bg-color);
-  color: white;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-h1,
-.h1 {
-  margin: 0;
-  font-size: 15px;
-  color: white;
-}
-
-.subTit {
-  font-size: 10px;
-  margin: 0;
-  color: #9ca3af;
-}
-
-.menu-btn {
-  display: none;
-  background: var(--hero-bg-color);
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 1.2rem;
-}
-
-.nav {
-  display: flex;
-  gap: 1rem;
-}
-
-.nav a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-}
-
-.nav a:hover {
-  background-color: var(--hero-bg-color);
-}
-
-/* ============= HERO ============= */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 4rem 2rem;
-  min-height: 80vh;
-}
-
-.hero-text {
-  flex: 1;
-  max-width: 600px;
-}
-
-.name {
-  font-size: clamp(3rem, 8vw, 5rem);
-  margin: 1rem 0;
-  line-height: 1.1;
-  font-weight: bold;
-}
-
-.pText {
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  color: #9ca3af;
-  margin: 1rem 0;
-}
-
-.redes {
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-}
-
-.ig,
-.twitter,
-.be,
-.bbb,
-.git {
-  width: 45px;
-  height: 45px;
-  background-color: var(--hero-bg-color);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.ig:hover,
-.twitter:hover,
-.be:hover,
-.bbb:hover,
-.git:hover {
-  transform: translateY(-5px);
-  background-color: #5a56ff;
-}
-
-.hero-avatar {
-  position: relative;
-  background-image: url('../img/pil_violet.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 400px;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn-mail {
-  background-color: white;
-  color: var(--hero-bg-color);
-  width: 70px;
-  height: 70px;
-  border: none;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.btn-mail:hover {
-  background-color: var(--hero-bg-color);
-  color: white;
-  transform: scale(1.1);
-}
-
-/* ============= DESIGNER SECTION ============= */
-.designer {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.tituloDesigner {
-  text-align: center;
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  margin-bottom: 3rem;
-  color: white;
-}
-
-.diseño {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  padding: 2rem;
-  margin: 1.5rem 0;
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
-  transition: transform 0.3s ease;
-}
-
-.diseño:hover {
-  transform: translateX(10px);
-}
-
-.diseño strong {
-  color: var(--hero-bg-color);
-  font-size: 2rem;
-  min-width: 60px;
-}
-
-.diseño h3 {
-  color: white;
-  font-size: 1.3rem;
-  min-width: 150px;
-}
-
-.pDiseño {
-  flex: 1;
-  color: #9ca3af;
-  font-size: 0.95rem;
-}
-
-.flecha {
-  width: 30px;
-  height: 30px;
-  opacity: 0.5;
-}
-
-/* ============= SKILLS ============= */
-.skills {
-  padding: 4rem 2rem;
-  background-color: #13121c;
-  text-align: center;
-}
-
-.skills h2 {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  margin-bottom: 1rem;
-}
-
-.skills > p {
-  max-width: 800px;
-  margin: 0 auto 3rem;
-  color: #9ca3af;
-}
-
-.cont-box {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.item-skills {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.box {
-  background-color: #2f2f47;
-  width: 140px;
-  height: 140px;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.box:hover {
-  transform: translateY(-10px);
-}
-
-.icono {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-}
-
-.bar {
-  width: 90%;
-  height: 8px;
-  background-color: #444355;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.relleno {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 5px;
-  transition: width 0.5s ease;
-}
-
-.relleno p {
-  font-size: 8px;
-  margin: 0;
-  color: white;
-}
-
-/* Colores de barras según nivel */
-.relleno-bar-angular,
-.relleno-bar-cSharp,
-.relleno-bar-css3,
-.relleno-bar-figma,
-.relleno-bar-github,
-.relleno-ar-ilustrator,
-.relleno-bar-netbeans,
-.relleno-bar-photoshop {
-  background-color: #e4c82d;
-  width: 30%;
-}
-
-.relleno-bar-html-5 {
-  background-color: #94f328;
-  width: 40%;
-}
-
-.relleno-bar-js,
-.relleno-bar-visual,
-.relleno-bar-visualCode {
-  background-color: #02c3fd;
-  width: 50%;
-}
-
-.relleno-bar-scrum,
-.relleno-ar-premier {
-  background-color: #124be7;
-  width: 60%;
-}
-
-.relleno-bar-workbench {
-  background-color: #dff708;
-  width: 20%;
-}
-
-/* ============= WORKS ============= */
-.works {
-  padding: 4rem 2rem;
-  background-color: #13121c;
-  text-align: center;
-}
-
-.works h2 {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  margin-bottom: 1rem;
-}
-
-.works > p {
-  max-width: 800px;
-  margin: 0 auto 3rem;
-  color: #9ca3af;
-}
-
-.items-works {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 3rem auto;
-  padding: 1rem;
-  max-width: 800px;
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 40px;
-  flex-wrap: wrap;
-}
-
-.items-works a {
-  padding: 0.75rem 1.5rem;
-  color: white;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-}
-
-.items-works a:hover,
-.items-works a.active {
-  background-color: var(--hero-bg-color);
-}
-
-.ejemplos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.col1,
-.col2 {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.img-eje {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-  transition: transform 0.3s ease;
-}
-
-.img-eje:hover {
-  transform: scale(1.05);
-}
-
-/* ============= CONTACT ============= */
-.aboutMe {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 3rem;
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.fo {
-  background-color: var(--card-bg);
-  padding: 2rem;
-  border-radius: 20px;
-  border: 1px solid var(--border-color);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.ia h3 {
-  color: white;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.ia p {
-  color: #9ca3af;
-  margin-bottom: 1.5rem;
-}
-
-.fn,
-.ln,
-.ea,
-.pn,
-.cs,
-.ym {
-  background-color: #101010;
-  border: 1px solid #333;
-  border-radius: 10px;
-  padding: 1rem;
-  color: white;
-  font-size: 1rem;
-}
-
-.ym {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.bt {
-  background-color: var(--hero-bg-color);
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 10px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.bt:hover {
-  background-color: #5a56ff;
-  transform: translateY(-2px);
-}
-
-.contact-about {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.contact {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  background-color: var(--card-bg);
-  border-radius: 15px;
-  border: 1px solid var(--border-color);
-}
-
-.material-symbols-outlined {
-  background-color: var(--hero-bg-color);
-  color: white;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-}
-
-.col-contact p {
-  color: #9ca3af;
-  margin: 0;
-  font-size: 0.9rem;
-}
-
-.col-contact strong {
-  color: white;
-  font-size: 1.1rem;
-}
-
-/* ============= FOOTER ============= */
-.isologotipo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding: 3rem 0;
-}
-
-.img-brand {
-  width: 60px;
-  height: auto;
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
-  border-top: 1px solid #222;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.copyright {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #9ca3af;
-}
-
-.nav-footer {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.nav-footer a {
-  color: #9ca3af;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.nav-footer a:hover {
-  color: white;
-}
-
-/* ============= FLOATING BUTTON ============= */
-.floating-btn {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background-color: white;
-  color: var(--hero-bg-color);
-  width: 60px;
-  height: 60px;
-  border: none;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
-
-.floating-btn:hover {
-  background-color: var(--hero-bg-color);
-  color: white;
-  transform: scale(1.1);
-}
-
-/* ============= RESPONSIVE ============= */
-@media (max-width: 768px) {
-  .menu-btn {
-    display: block;
-  }
-
-  .nav {
-    display: none;
-  }
-
-  .header {
-    padding: 1rem;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-
-  .hero-avatar {
-    width: 250px;
-    height: 250px;
-  }
-
-  .btn-mail {
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
-  }
-
-  .diseño {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .diseño h3 {
-    min-width: auto;
-  }
-
-  .aboutMe {
-    grid-template-columns: 1fr;
-  }
-
-  footer {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .nav-footer {
-    justify-content: center;
-  }
-
-  .floating-btn {
-    bottom: 1rem;
-    right: 1rem;
-    width: 50px;
-    height: 50px;
-  }
-}
-
-@media (max-width: 480px) {
-  .name {
-    font-size: 2.5rem;
-  }
-
-  .redes {
-    justify-content: center;
-  }
-
-  .items-works a {
-    font-size: 0.85rem;
-    padding: 0.5rem 1rem;
-  }
-
-  .ejemplos {
-    grid-template-columns: 1fr;
-  }
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio – Facundo Aragón</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/estilos.css" />
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="branding">
+    <span class="logo">FA</span>
+    <div>
+      <h1 class="h1">Facundo</h1>
+      <p class="subTit">Aragón</p>
+    </div>
+  </div>
+
+  <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <nav class="nav" id="navMenu">
+    <a href="#hero">Inicio</a>
+    <a href="#about">Sobre mí</a>
+    <a href="#skills">Habilidades</a>
+    <a href="#works">Trabajos</a>
+    <a href="#contact">Contacto</a>
+  </nav>
+</header>
+
+<!-- Overlay para cerrar menú al hacer click fuera -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<main>
+
+<section id="hero" class="hero">
+  <div class="hero-text">
+    <p class="pText">Hola, soy</p>
+    <h1 class="name">Facu<br>Aragón</h1>
+    <p class="pText">DevOps | Scrum | Full Stack Developer</p>
+    
+    <section class="redes">
+      <button class="ig btn" onclick="location.href='https://www.instagram.com/facusam_?igsh=NjBodnZreGJlZnY4'">
+        <i class="fa-brands fa-instagram"></i>
+      </button>
+      <button class="twitter btn" onclick="location.href='https://x.com/FacundoSamela'">
+        <i class="fa-brands fa-twitter"></i>
+      </button>
+      <button class="be btn" onclick="location.href='https://www.facebook.com/safa810'">
+        <i class="fa-brands fa-facebook-f"></i>
+      </button>
+      <button class="bbb btn" onclick="location.href='https://www.linkedin.com/in/facundo-aragón-899026100'">
+        <i class="fa-brands fa-linkedin"></i>
+      </button>
+      <button class="git btn" onclick="location.href='https://www.github.com/20FacuSam23'">
+        <i class="fa-brands fa-github"></i>
+      </button>
+    </section>
+  </div>
+
+  <div class="hero-avatar">
+    <button class="btn-white btn-mail btn" type="button"
+      onclick="location.href='mailto:facundo.samela@gmail.com?Subject=Contacto%20desde%20portfolio'">
+      <i class="fa-solid fa-envelope"></i>
+    </button>
+  </div>
+</section>
+
+<section id="about" class="designer">
+  <h2 class="tituloDesigner">Diseño / Herramientas para desarrollar</h2>
+  
+  <article class="diseño">
+    <strong>01</strong>
+    <h3>UI/UX</h3>
+    <p class="pDiseño">El diseño UX se centra en crear una experiencia de usuario fluida y significativa al comprender las necesidades del usuario.</p>
+    <img src="img/flecha.png" class="flecha" alt="">
+  </article>
+  
+  <article class="diseño">
+    <strong>02</strong>
+    <h3>Diseño Web</h3>
+    <p class="pDiseño">Un diseñador web crea la disposición y el diseño de un sitio web. En términos simples, un diseñador de sitios web hace que un sitio se vea bien.</p>
+    <img src="img/flecha.png" class="flecha" alt="">
+  </article>
+  
+  <article class="diseño">
+    <strong>03</strong>
+    <h3>Desarrollo Front-end</h3>
+    <p class="pDiseño">Para garantizar que los visitantes del sitio web puedan interactuar fácilmente con la página mediante la combinación de diseño.</p>
+    <img src="img/flecha.png" class="flecha" alt="">
+  </article>
+  
+  <article class="diseño">
+    <strong>04</strong>
+    <h3>Diseño Gráfico</h3>
+    <p class="pDiseño">El diseño gráfico es un oficio donde los profesionales crean contenido visual para comunicar mensajes.</p>
+    <img src="img/flecha.png" class="flecha" alt="">
+  </article>
+</section>
+
+<section id="skills" class="skills">
+  <h2>Mis Habilidades</h2>
+  <p>Una habilidad crucial en el conjunto de habilidades de un diseñador es saber cómo utilizar imágenes, tipografía y otras herramientas para que el espectador "capte el mensaje".</p>
+  
+  <section class="cont-box">
+    <article class="item-skills">
+      <div class="box">
+        <img src="img/angular.png" class="icono" alt="Angular">
+        <div class="bar">
+          <div class="relleno relleno-bar-angular">
+            <p>30%</p>
+          </div>
+        </div>
+      </div>
+      <p>Angular</p>
+    </article>
+    
+    <article class="item-skills">
+      <div class="box">
+        <img src="img/html-5.png" class="icono" alt="HTML5">
+        <div class="bar">
+          <div class="relleno relleno-bar-html-5">
+            <p>40%</p>
+          </div>
+        </div>
+      </div>
+      <p>HTML 5</p>
+    </article>
+    
+    <article class="item-skills">
+      <div class="box">
+        <img src="img/css3.png" class="icono" alt="CSS3">
+        <div class="bar">
+          <div class="relleno relleno-bar-css3">
+            <p>30%</p>
+          </div>
+        </div>
+      </div>
+      <p>CSS 3</p>
+    </article>
+    
+    <article class="item-skills">
+      <div class="box">
+        <img src="img/js.png" class="icono" alt="JavaScript">
+        <div class="bar">
+          <div class="relleno relleno-bar-js">
+            <p>50%</p>
+          </div>
+        </div>
+      </div>
+      <p>JavaScript</p>
+    </article>
+    
+    <article class="item-skills">
+      <div class="box">
+        <img src="img/github.png" class="icono" alt="GitHub">
+        <div class="bar">
+          <div class="relleno relleno-bar-github">
+            <p>30%</p>
+          </div>
+        </div>
+      </div>
+      <p>GitHub</p>
+    </article>
+    
+    <article class="item-skills">
+      <div class="box">
+        <img src="img/scrum.png" class="icono" alt="Scrum">
+        <div class="bar">
+          <div class="relleno relleno-bar-scrum">
+            <p>60%</p>
+          </div>
+        </div>
+      </div>
+      <p>Scrum</p>
+    </article>
+  </section>
+</section>
+
+<section id="works" class="works">
+  <h2>Trabajos Recientes</h2>
+  <p>"Plasmamos sus ideas y, por tanto, sus deseos en forma de un proyecto web único que le inspirará a usted y a sus clientes."</p>
+
+  <article class="items-works btn">
+    <a href="#" class="active">Todo</a>
+    <a href="#">Diseño UI/UX</a>
+    <a href="#">Diseño Web</a>
+    <a href="#">Diseño Gráfico</a>
+  </article>
+
+  <article class="ejemplos">
+    <div class="col1">
+      <img class="img-eje" src="img/resentWorkImg1.png" alt="Proyecto 1">
+      <img class="img-eje" src="img/attache.png" alt="Proyecto 2">
+    </div>
+    <div class="col2">
+      <img class="img-eje" src="img/carrito.png" alt="Proyecto 3">
+      <img class="img-eje" src="img/nutProduct.png" alt="Proyecto 4">
+    </div>
+  </article>
+</section>
+
+<section id="contact" class="aboutMe">
+  <article class="fo">
+    <div class="ia">
+      <h3>¡Vamos a trabajar juntos!</h3>
+      <p>Diseño y codifico cosas maravillosamente simples y amo lo que hago. ¡Así de simple!</p>
+    </div>
+    <input class="fn" type="text" placeholder="Nombre">
+    <input class="ln" type="text" placeholder="Apellido">
+    <input class="ea" type="email" placeholder="Email">
+    <input class="pn" type="tel" placeholder="Teléfono">
+    <select class="cs" name="select">
+      <option value="">Seleccionar Servicios</option>
+      <option value="scrum">Scrum</option>
+      <option value="devops">DevOps</option>
+      <option value="diseno">Diseño</option>
+    </select>
+    <textarea class="ym" placeholder="Déjanos un Mensaje"></textarea>
+    <button class="bt btn">Enviar</button>
+  </article>
+  
+  <article class="contact-about">
+    <div class="contact">
+      <span class="material-symbols-outlined btn">
+        <i class="fa-solid fa-phone"></i>
+      </span>
+      <div class="col-contact">
+        <p>Teléfono</p>
+        <strong>+54 9 343 706-8045</strong>
+      </div>
+    </div>
+    
+    <div class="contact">
+      <span class="material-symbols-outlined btn">
+        <i class="fa-solid fa-envelope"></i>
+      </span>
+      <div class="col-contact">
+        <p>E-mail</p>
+        <strong>facusamel@gmail.com</strong>
+      </div>
+    </div>
+    
+    <div class="contact">
+      <span class="material-symbols-outlined btn">
+        <i class="fa-solid fa-location-dot"></i>
+      </span>
+      <div class="col-contact">
+        <p>Localización</p>
+        <strong>Paraná, Entre Ríos</strong>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="isologotipo">
+  <img src="img/img-brand.png" class="img-brand" alt="Logo Facundo Aragón">
+  <div>
+    <p class="h1">Facundo</p>
+    <p class="subTit">Aragón</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <section class="copyright">
+    <i class="fa-regular fa-copyright"></i>
+    <p>2025 Todos los derechos reservados por Aragón Facundo</p>
+  </section>
+  
+  <section class="nav-footer">
+    <a href="#hero">Inicio</a>
+    <a href="#about">Diseño</a>
+    <a href="#skills">Habilidades</a>
+    <a href="#works">Proyectos</a>
+    <a href="#contact">Contacto</a>
+  </section>
+</footer>
+
+<button class="floating-btn btn-white" onclick="location.href='mailto:facundo.samela@gmail.com?Subject=Contacto%20desde%20portfolio'">
+  <i class="fa-solid fa-envelope"></i>
+</button>
+
+<script>
+  // Menú móvil
+  const menuBtn = document.getElementById('menuBtn');
+  const navMenu = document.getElementById('navMenu');
+  const menuOverlay = document.getElementById('menuOverlay');
+  
+  menuBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    menuOverlay.classList.toggle('active');
+    menuBtn.innerHTML = navMenu.classList.contains('active') 
+      ? '<i class="fa-solid fa-xmark"></i>' 
+      : '<i class="fa-solid fa-bars"></i>';
+  });
+  
+  // Cerrar menú al hacer click en el overlay
+  menuOverlay.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    menuOverlay.classList.remove('active');
+    menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+  });
+  
+  // Cerrar menú al hacer click en un enlace
+  document.querySelectorAll('.nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    });
+  });
+</script>
+
+</body>
+      </html>
