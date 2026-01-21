@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio – Facundo</title>
+
+  <link rel="stylesheet" href="normalize.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<header class="header">
+  <div class="branding">
+    <span class="logo">FS</span>
+    <span class="name">Facundo</span>
+  </div>
+
+  <button class="menu-btn" aria-label="Abrir menú">☰</button>
+
+  <nav class="nav">
+    <a href="#hero">Inicio</a>
+    <a href="#works">Trabajos</a>
+    <a href="#contact">Contacto</a>
+  </nav>
+</header>
+
+<main>
+
+<section id="hero" class="hero">
+  <div class="hero-text">
+    <h1>Desarrollador Frontend</h1>
+    <p>Interfaces claras, responsive y funcionales.</p>
+  </div>
+
+  <div class="hero-avatar">
+    <img src="https://via.placeholder.com/220" alt="Avatar">
+  </div>
+</section>
+
+<section id="works" class="works">
+  <h2>Trabajos recientes</h2>
+
+  <div class="filters">
+    <button>Todo</button>
+    <button>Web</button>
+    <button>UI</button>
+    <button>Apps</button>
+  </div>
+
+  <div class="grid">
+    <article class="card">Proyecto 1</article>
+    <article class="card">Proyecto 2</article>
+    <article class="card">Proyecto 3</article>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contacto</h2>
+
+  <form class="form">
+    <input type="text" placeholder="Nombre">
+    <input type="email" placeholder="Email">
+    <textarea placeholder="Mensaje"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+</main>
+
+<button class="floating-btn">✉</button>
+
+</body>
+</html>
