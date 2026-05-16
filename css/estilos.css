@@ -191,8 +191,8 @@ h1,
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 400px;
-  height: 400px;
+ width: 180px;
+height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -607,7 +607,7 @@ h4 {
 /* ============= CONTACT ============= */
 .aboutMe {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 3rem;
   padding: 4rem 2rem;
   max-width: 1200px;
@@ -973,14 +973,16 @@ footer {
   .name {
     font-size: 2.5rem;
   }
-
+body {
+  overflow-x: hidden;
+}
   .pText {
     font-size: 1rem;
   }
 
   .hero-avatar {
-    width: 220px;
-    height: 220px;
+   width: 180px;
+height: 180px;
   }
 
   .btn-mail {
