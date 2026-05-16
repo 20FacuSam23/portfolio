@@ -6,6 +6,9 @@
   --card-bg: #27262b;
   --border-color: #5e5e74;
 }
+html, body {
+  overflow-x: hidden;
+}
 
 * {
   box-sizing: border-box;
@@ -785,6 +788,7 @@ footer {
   .menu-btn {
     display: block;
   }
+  
 
   .nav {
     position: fixed;
@@ -873,7 +877,7 @@ footer {
       "edu"
       "exp";
     grid-template-columns: 1fr;
-    width: 90%;
+    width: 100%;
     padding: 1.5rem;
   }
 
@@ -973,6 +977,14 @@ footer {
   .name {
     font-size: 2.5rem;
   }
+  .contact-about,
+.fo {
+  width: 100%;
+  min-width: 0;
+}
+  .hero {
+  padding: 1.5rem 0.8rem;
+}
 body {
   overflow-x: hidden;
 }
@@ -1023,11 +1035,12 @@ height: 180px;
     width: 95%;
   }
 
-  .edu,
-  .exp {
-    width: 90%;
-    margin-left: 15px;
-  }
+.edu,
+.exp {
+  width: 100%;
+  margin-left: 0;
+  padding-right: 10px;
+}
 
   h4 {
     font-size: 0.75rem;
