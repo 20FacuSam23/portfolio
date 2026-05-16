@@ -285,7 +285,8 @@ height: 180px;
   font-family: var(--hero-font-family);
   display: grid;
   grid-template-areas: "edu exp";
-  grid-template-rows: 100% 1fr 1fr 100%;
+  grid-template-rows: auto;
+  align-items: start;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 10px;
@@ -876,8 +877,8 @@ footer {
     grid-template-areas: 
       "edu"
       "exp";
-    grid-template-columns: 1fr;
-    width: 100%;
+    grid-template-rows: auto;
+  align-items: start;
     padding: 1.5rem;
   }
 
