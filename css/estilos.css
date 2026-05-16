@@ -1117,3 +1117,72 @@ height: 180px;
     font-size: 1.2rem;
   }
 }
+
+
+/* Mejoras puntuales para pegar AL FINAL de tu estilos.css */
+
+html, body {
+  overflow-x: hidden;
+}
+
+#grid-eYe {
+  grid-template-rows: auto;
+  align-items: start;
+}
+
+.material-symbols-outlined {
+  flex-shrink: 0;
+}
+
+.material-symbols-outlined i {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.aboutMe {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+@media (max-width: 768px) {
+  #grid-eYe {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .edu,
+  .exp {
+    width: 100%;
+    margin-left: 0;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .hero-avatar {
+    width: 180px;
+    height: 180px;
+  }
+
+  .contact-about,
+  .fo {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .edu,
+  .exp {
+    width: 100%;
+    margin-left: 0;
+    padding-right: 10px;
+  }
+
+  .material-symbols-outlined {
+    width: 52px;
+    height: 52px;
+  }
+}
+
