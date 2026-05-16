@@ -286,7 +286,6 @@ height: 180px;
   display: grid;
   grid-template-areas: "edu exp";
   grid-template-rows: auto;
-  align-items: start;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 10px;
@@ -294,8 +293,12 @@ height: 180px;
   color: #5f6071;
   background-color: #21203f;
   border: 1px solid #5f6071;
-  border-radius: 10px;
-  height: 100%;
+  border-radius: 10px; 
+  height: auto;
+  grid-template-rows: auto;
+  grid-auto-rows: min-content;
+  align-items: start;
+}
   margin: 2% auto;
   padding: 2rem;
 }
@@ -1173,12 +1176,11 @@ html, body {
     min-width: 0;
   }
 
-  .edu,
-  .exp {
-    width: 100%;
-    margin-left: 0;
-    padding-right: 10px;
-  }
+.edu,
+.exp {
+  height: auto;
+  min-height: unset;
+}
 
   .material-symbols-outlined {
     width: 52px;
