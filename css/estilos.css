@@ -9,6 +9,9 @@
 html, body {
   overflow-x: hidden;
 }
+.designer {
+  margin-top: 2rem;
+}
 
 * {
   box-sizing: border-box;
@@ -837,11 +840,20 @@ footer {
   .hero-text {
     max-width: 100%;
   }
+  .hero-text {
+  text-align: center;
+}
 
-  .hero-avatar {
-    width: 280px;
-    height: 280px;
-  }
+.name {
+  font-size: 3rem;
+}
+
+ .hero-avatar {
+  width: 280px;
+  height: 280px;
+  margin: 1rem auto;
+  background-size: 90%;
+}
 
   .btn-mail {
     width: 60px;
@@ -996,10 +1008,12 @@ body {
     font-size: 1rem;
   }
 
-  .hero-avatar {
-   width: 180px;
-height: 180px;
-  }
+.hero-avatar {
+  width: 280px;
+  height: 280px;
+  margin: 1rem auto;
+  background-size: 90%;
+}
 
   .btn-mail {
     width: 50px;
@@ -1185,6 +1199,11 @@ html, body {
   .material-symbols-outlined {
     width: 52px;
     height: 52px;
+  }
+}
+@media (max-width: 768px) {
+  .floating-btn {
+    display: none;
   }
 }
 
