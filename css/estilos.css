@@ -301,7 +301,6 @@ height: 180px;
   grid-template-rows: auto;
   grid-auto-rows: min-content;
   align-items: start;
-}
   margin: 2% auto;
   padding: 2rem;
 }
