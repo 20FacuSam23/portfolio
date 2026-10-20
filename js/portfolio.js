@@ -378,11 +378,11 @@
     }
     copyButton.textContent = copied
       ? "Email copiado ✓"
-      : "Copiá el email de arriba";
+      : "No se pudo copiar";
     if (status)
       status.textContent = copied
         ? "Email copiado al portapapeles."
-        : `No se pudo copiar automáticamente. El email es ${email}.`;
+        : "No se pudo copiar el email. Usá el enlace de contacto para abrir tu aplicación de correo.";
     clearTimeout(copyTimer);
     copyTimer = setTimeout(() => {
       copyButton.textContent = "Copiar email ⧉";

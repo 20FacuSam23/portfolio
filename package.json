@@ -3,7 +3,7 @@
   "private": true,
   "version": "2.0.0",
   "type": "module",
-  "description": "Portfolio estático de Facundo Samela Aragón, publicado en GitHub Pages.",
+  "description": "Portfolio estático de Facundo Aragón, publicado en GitHub Pages.",
   "scripts": {
     "check": "node --check js/scene.js && node --check js/portfolio.js && node --check js/presentacion.js && node scripts/check.mjs",
     "test": "node --test tests/portfolio.test.mjs"

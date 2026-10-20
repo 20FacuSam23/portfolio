@@ -1,4 +1,4 @@
-# Facundo Samela Aragón — Portfolio
+# Facundo Aragón — Portfolio
 
 Portfolio personal de desarrollo web y diseño. Publicado en **https://20facusam23.github.io/portfolio/**.
 
