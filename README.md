@@ -10,6 +10,10 @@ Portfolio personal de desarrollo web y diseño. Publicado en **https://20facusam
 - Navegación adaptable, acceso por teclado y preferencia de movimiento reducido. El botón de movimiento permite pausar las animaciones.
 - Email, portapapeles y enlaces de contacto directos. No hay un formulario que simule enviar mensajes.
 
+## Muestras recientes
+
+La sección «Páginas reales» integra cuatro vistas públicas: A Remarla, Nuts, Aula Datalisting y Tienda Datalisting. Las vistas son miniaturas en tiempo real mediante iframes de GitHub Pages, no capturas PNG ni imágenes creadas artificialmente; se cargan de forma diferida, no admiten interacción dentro de la miniatura y ofrecen enlaces directos. Se aíslan de las sesiones existentes con un sandbox sin acceso al mismo origen. El backend de las funciones autenticadas puede no estar disponible y ninguna pantalla privada se incluye en las muestras.
+
 ## Publicación
 
 El sitio es estático y no necesita compilación ni dependencias en producción. GitHub Pages sirve la raíz del repositorio. Se conservan rutas relativas para funcionar bajo `/portfolio/`.
