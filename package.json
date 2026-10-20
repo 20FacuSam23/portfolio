@@ -1,0 +1,15 @@
+{
+  "name": "facundo-portfolio",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "Portfolio estático de Facundo Samela Aragón, publicado en GitHub Pages.",
+  "scripts": {
+    "check": "node --check js/scene.js && node --check js/portfolio.js && node --check js/presentacion.js && node scripts/check.mjs",
+    "test": "node --test tests/portfolio.test.mjs"
+  },
+  "devDependencies": {
+    "css-tree": "^3.1.0",
+    "linkedom": "^0.18.12"
+  }
+}

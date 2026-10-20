@@ -1,425 +1,636 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio – Facundo Aragón</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/estilos.css?v=2" />
-  
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-
-<body>
-
-<header class="header">
-  <div class="branding">
-    <span class="logo">FA</span>
-    <div>
-      <h1 class="h1">Facundo</h1>
-      <p class="subTit">Aragón</p>
-    </div>
-  </div>
-
-  <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
-    <i class="fa-solid fa-bars"></i>
-  </button>
-
-  <nav class="nav" id="navMenu">
-    <a href="#hero">Inicio</a>
-    <a href="#about">Sobre mí</a>
-    <a href="#education">Educación</a>
-    <a href="#skills">Habilidades</a>
-    <a href="#works">Trabajos</a>
-    <a href="#contact">Contacto</a>
-  </nav>
-</header>
-
-<!-- Overlay para cerrar menú al hacer click fuera -->
-<div class="menu-overlay" id="menuOverlay"></div>
-
-<main>
-
-<section id="hero" class="hero">
-  <div class="hero-text">
-    <p class="pText">Hola, soy</p>
-    <h1 class="name">Facu<br>Aragón</h1>
-    <p class="pText">DevOps | Scrum | Full Stack Developer</p>
-    
-    <section class="redes">
-      <button class="ig btn" onclick="location.href='https://www.instagram.com/facusam_?igsh=NjBodnZreGJlZnY4'">
-        <i class="fa-brands fa-instagram"></i>
-      </button>
-      <button class="twitter btn" onclick="location.href='https://x.com/FacundoSamela'">
-        <i class="fa-brands fa-twitter"></i>
-      </button>
-      <button class="be btn" onclick="location.href='https://www.facebook.com/safa810'">
-        <i class="fa-brands fa-facebook-f"></i>
-      </button> 
-      <button class="bbb btn" onclick="location.href='linkedin.com/in/facundo-samela-aragón-899026100'">
-        <i class="fa-brands fa-linkedin"></i>
-      </button>
-      <button class="git btn" onclick="location.href='https://www.github.com/20FacuSam23'">
-        <i class="fa-brands fa-github"></i>
-      </button>
-    </section>
-  </div>
-
-  <div class="hero-avatar">
-    <button class="btn-white btn-mail btn" type="button"
-      onclick="location.href='mailto:facundo.samela@gmail.com?Subject=Contacto%20desde%20portfolio'">
-      <i class="fa-solid fa-envelope"></i>
-    </button>
-  </div>
-</section>
-
-<section id="about" class="designer">
-  <h2 class="tituloDesigner">Diseño / Herramientas para desarrollar</h2>
-  
-  <article class="diseño">
-    <strong>01</strong>
-    <h3>UI/UX</h3>
-    <p class="pDiseño">El diseño UX se centra en crear una experiencia de usuario fluida y significativa al comprender las necesidades del usuario.</p>
-    <img src="img/flecha.png" class="flecha" alt="">
-  </article>
-  
-  <article class="diseño">
-    <strong>02</strong>
-    <h3>Diseño Web</h3>
-    <p class="pDiseño">Un diseñador web crea la disposición y el diseño de un sitio web. En términos simples, un diseñador de sitios web hace que un sitio se vea bien.</p>
-    <img src="img/flecha.png" class="flecha" alt="">
-  </article>
-  
-  <article class="diseño">
-    <strong>03</strong>
-    <h3>Desarrollo Front-end</h3>
-    <p class="pDiseño">Para garantizar que los visitantes del sitio web puedan interactuar fácilmente con la página mediante la combinación de diseño.</p>
-    <img src="img/flecha.png" class="flecha" alt="">
-  </article>
-  
-  <article class="diseño">
-    <strong>04</strong>
-    <h3>Diseño Gráfico</h3>
-    <p class="pDiseño">El diseño gráfico es un oficio donde los profesionales crean contenido visual para comunicar mensajes.</p>
-    <img src="img/flecha.png" class="flecha" alt="">
-  </article>
-</section>
-
-<section id="education" class="edu-exp">
-  <div class="grid-eYe" id="grid-eYe">
-    <div id="edu">
-      <article class="cont-title-edu">
-        <div class="titulo-edu">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <h2>Educación</h2>
+<!doctype html>
+<html lang="es" data-motion="on">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101014" />
+    <title>Facundo Samela Aragón — Desarrollo web y diseño</title>
+    <meta
+      name="description"
+      content="Portfolio de Facundo Samela Aragón. Desarrollo web, diseño de interfaces y proyectos propios desde Paraná, Argentina."
+    />
+    <link rel="canonical" href="https://20facusam23.github.io/portfolio/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta
+      property="og:title"
+      content="Facundo Samela Aragón — De la idea a lo real."
+    />
+    <meta
+      property="og:description"
+      content="Desarrollo web, diseño y proyectos propios. Conocé lo que estoy construyendo."
+    />
+    <meta
+      property="og:url"
+      content="https://20facusam23.github.io/portfolio/"
+    />
+    <meta
+      property="og:image"
+      content="https://20facusam23.github.io/portfolio/assets/compartir.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/fonts/space-grotesk-variable.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="css/estilos.css?v=20261020" />
+    <script>
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+        document.documentElement.dataset.motion = "off";
+    </script>
+    <script src="js/scene.js?v=20261020" defer></script>
+    <script src="js/portfolio.js?v=20261020" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <div class="page-progress" aria-hidden="true"><span></span></div>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Facundo Samela Aragón, inicio"
+        ><span class="brand-mark">FA<span>↗</span></span
+        ><span class="brand-caption">FACUNDO<br />SAMELA ARAGÓN</span></a
+      >
+      <nav class="navigation" id="navigation" aria-label="Navegación principal">
+        <a href="#proyectos">Proyectos<span>01</span></a
+        ><a href="#enfoque">Enfoque<span>02</span></a
+        ><a href="#sobre-mi">Sobre mí<span>03</span></a
+        ><a href="#contacto" class="nav-contact"
+          >Hablemos <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+      <div class="header-actions">
+        <button
+          class="motion-toggle"
+          id="motion-toggle"
+          type="button"
+          aria-pressed="false"
+          aria-label="Pausar animaciones"
+          title="Pausar animaciones"
+        >
+          <span class="motion-icon" aria-hidden="true"><i></i><i></i></span
+          ><span class="motion-label">Movimiento</span>
+        </button>
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-controls="navigation"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <button
+      class="menu-scrim"
+      id="menu-scrim"
+      type="button"
+      aria-label="Cerrar menú"
+      tabindex="-1"
+      hidden
+    ></button>
+    <main id="main">
+      <section
+        class="hero section-shell"
+        id="inicio"
+        aria-labelledby="hero-title"
+      >
+        <div class="hero-topline">
+          <span
+            ><i class="status-dot" aria-hidden="true"></i> DESARROLLO WEB &
+            DISEÑO</span
+          ><span>PARANÁ, ARGENTINA <span aria-hidden="true">↗</span></span>
         </div>
-      </article>
-
-      <section class="formacion">
-        <article class="edu primer-contenedor">
-          <div class="eve-time-line">
-            <i class="fa-solid fa-circle"></i>
-            <h4>2022 Full Stack</h4>
+        <div class="hero-content">
+          <p class="hero-intro enter">Hola, soy Facundo.</p>
+          <h1 class="hero-title" id="hero-title">
+            <span class="title-mask"><span>DE LA IDEA</span></span
+            ><span class="title-mask"
+              ><span
+                >A LO <em>REAL.</em
+                ><span class="title-star" aria-hidden="true">✳</span></span
+              ></span
+            >
+          </h1>
+          <p class="hero-description enter">
+            Desarrollo experiencias web.<br />Con diseño, código y atención al
+            detalle.
+          </p>
+          <div class="hero-actions enter">
+            <a class="button button-primary magnetic" href="#proyectos"
+              >Explorá mis proyectos <span aria-hidden="true">↗</span></a
+            ><a class="reel-link" href="presentacion.html"
+              ><span class="play-icon" aria-hidden="true">▶</span> Ver
+              presentación</a
+            >
           </div>
-          <p>DevOps</p>
-          <p class="detalle">Curso realizado en programa gubernamental dictado por INTI.</p>
-        </article>
-
-        <article class="edu">
-          <div class="eve-time-line">
-            <i class="fa-solid fa-circle"></i>
-            <h4>ECOA 2021</h4>
-          </div>
-          <p>Coach ontológico sistémico</p>
-          <p class="detalle">Diversos talleres y curso de un año de Coach ontológico.</p>
-        </article>
-
-        <article class="edu">
-          <div class="eve-time-line">
-            <i class="fa-solid fa-circle"></i>
-            <h4>2016 SGM</h4>
-          </div>
-          <p>Diplomatura en metodologías ágiles de desarrollo</p>
-          <p class="detalle">Acompañamiento y aplicación de las técnicas de desarrollo de las metodologías de Scrum.</p>
-        </article>
-
-        <article class="edu ultimo-contenedor">
-          <div class="eve-time-line">
-            <i class="fa-solid fa-circle presente"></i>
-            <h4>2022 - Presente</h4>
-          </div>
-          <p>Programador Junior</p>
-          <p class="detalle">T.U.P. Técnico universitario en programación, UTN-FRP</p>
-        </article>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-glow"></div>
+          <svg class="art-fallback" viewBox="0 0 600 600" fill="none">
+            <ellipse
+              cx="300"
+              cy="300"
+              rx="220"
+              ry="135"
+              transform="rotate(-38 300 300)"
+              stroke="#a48aff"
+              stroke-width="3"
+            />
+            <ellipse
+              cx="300"
+              cy="300"
+              rx="200"
+              ry="115"
+              transform="rotate(35 300 300)"
+              stroke="#625087"
+              stroke-width="2"
+            />
+            <ellipse
+              cx="300"
+              cy="300"
+              rx="180"
+              ry="160"
+              transform="rotate(70 300 300)"
+              stroke="#cbbaff"
+              stroke-width="2"
+            />
+          </svg>
+          <canvas id="hero-canvas"></canvas
+          ><span class="art-cross cross-one">+</span
+          ><span class="art-cross cross-two">+</span
+          ><span class="art-coordinate">IDEAS EN<br />MOVIMIENTO.</span
+          ><span class="art-index">FA / 2026</span>
+        </div>
+        <div class="hero-bottom">
+          <span>DISEÑO CON INTENCIÓN.<br />CÓDIGO CON CRITERIO.</span
+          ><a class="scroll-cue" href="#proyectos"
+            >SEGUÍ EXPLORANDO <span aria-hidden="true">↓</span></a
+          ><span class="hero-edition">PORTFOLIO<br />EDICIÓN 2026</span>
+        </div>
       </section>
-    </div>
-
-    <div id="exp" class="lin">
-      <article class="cont-title-exp">
-        <div class="titulo-exp">
-          <i class="fa-solid fa-briefcase"></i>
-          <h2>Experiencias</h2>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span
+            >DISEÑAR <i>✳</i> DESARROLLAR <i>✳</i> CONECTAR <i>✳</i> DAR FORMA
+            <i>✳</i> </span
+          ><span
+            >DISEÑAR <i>✳</i> DESARROLLAR <i>✳</i> CONECTAR <i>✳</i> DAR FORMA
+            <i>✳</i>
+          </span>
         </div>
-      </article>
-
-      <section class="trayectoria">
-        <article class="exp primer-contenedor">
-          <div class="eve-time-line">
-            <i class="fa-solid fa-circle"></i>
-            <h4>Club De Leones 2018</h4>
+      </div>
+      <section
+        class="work-section section-shell section-spacing"
+        id="proyectos"
+        aria-labelledby="work-title"
+      >
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span>01 /</span> PROYECTOS SELECCIONADOS</p>
+          <h2 id="work-title">
+            Lo que estoy<br /><span class="muted">construyendo.</span>
+          </h2>
+          <p class="section-description">
+            Plataformas, tiendas e interfaces.<br />Cada proyecto, una forma de
+            resolver.
+          </p>
+        </div>
+        <div class="work-toolbar reveal">
+          <div class="filters" role="group" aria-label="Filtrar proyectos">
+            <button type="button" data-filter="all" aria-pressed="true">
+              Todos <span>04</span></button
+            ><button type="button" data-filter="platform" aria-pressed="false">
+              Plataformas</button
+            ><button type="button" data-filter="commerce" aria-pressed="false">
+              Comercio
+            </button>
           </div>
-          <p>Desarrollador Web</p>
-          <p class="detalle">Diseño y mantenimiento de página web realizada con CMS como Joomla, Drupal o WordPress, para el Club de Leones.</p>
-        </article>
-
-        <article class="exp cola-contenedores">
-          <div class="eve-time-line">
-            <i class="fa-solid fa-circle"></i>
-            <h4>Varios 2018</h4>
-          </div>
-          <p>Página web publicitaria</p>
-          <p class="detalle">Desarrollo web para publicitar Negocios.</p>
-        </article>
-
-        <article class="exp cola-contenedores">
-          <div class="eve-time-line">
-            <i class="fa-solid fa-circle"></i>
-            <h4>2023 - 2024</h4>
-          </div>
-          <p>Portfolio web</p>
-          <p class="detalle">Desarrollo Web en curso del INTI.</p>
-        </article>
-
-        <article class="exp ultimo-contenedor">
-          <div class="eve-time-line">
-            <i class="fa-solid fa-circle presente"></i>
-            <h4>2024 - Presente</h4>
-          </div>
-          <p>Web SPA</p>
-          <p class="detalle">Sistema ABML para registración.</p>
-        </article>
+          <span class="toolbar-note"
+            >EXPLORÁ CADA PROYECTO <span aria-hidden="true">↘</span></span
+          >
+        </div>
+        <p
+          class="sr-only"
+          id="filter-status"
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          4 proyectos disponibles
+        </p>
+        <div class="project-grid">
+          <article
+            class="project reveal"
+            data-category="platform commerce"
+            style="view-transition-name: project-datalisting"
+          >
+            <button
+              type="button"
+              class="project-cover cover-datalisting"
+              data-project="datalisting"
+              aria-haspopup="dialog"
+              aria-label="Conocer el proyecto Datalisting"
+            >
+              <span class="cover-topline"
+                ><span>PROYECTO PROPIO</span><span>01 / 04</span></span
+              ><span class="datalisting-art"
+                ><span class="datalisting-orbit orbit-a"></span
+                ><span class="datalisting-orbit orbit-b"></span
+                ><span class="datalisting-orbit orbit-c"></span
+                ><span class="datalisting-symbol">d<span>↗</span></span
+                ><span class="floating-label label-one">TIENDAS</span
+                ><span class="floating-label label-two">PERSONAS</span
+                ><span class="floating-label label-three"
+                  >CONEXIONES</span
+                ></span
+              ><span class="cover-wordmark">datalisting</span
+              ><span class="project-open" aria-hidden="true">↗</span>
+            </button>
+            <div class="project-info">
+              <div>
+                <p class="project-type">PLATAFORMA WEB / COMERCIO</p>
+                <h3>Datalisting</h3>
+              </div>
+              <span class="project-stack">HTML · JavaScript · API</span>
+            </div>
+            <p class="project-summary">
+              Identidad, catálogos y tiendas conectadas en un proyecto propio.
+            </p>
+          </article>
+          <article
+            class="project reveal"
+            data-category="commerce"
+            style="view-transition-name: project-nuts"
+          >
+            <button
+              type="button"
+              class="project-cover cover-nuts"
+              data-project="nuts"
+              aria-haspopup="dialog"
+              aria-label="Conocer el proyecto Nuts"
+            >
+              <span class="cover-topline"
+                ><span>IDENTIDAD & TIENDA</span><span>02 / 04</span></span
+              ><span class="nuts-display"
+                ><span class="nuts-brand">nuts<span>✳</span></span
+                ><span class="nuts-caption"
+                  >SIMPLE.<br />NATURAL.<br />CONECTADO.</span
+                ><span class="nuts-preview"
+                  ><img
+                    src="img/nutProduct.png"
+                    width="734"
+                    height="720"
+                    alt=""
+                    loading="lazy"
+                    decoding="async" /></span></span
+              ><span class="project-open" aria-hidden="true">↗</span>
+            </button>
+            <div class="project-info">
+              <div>
+                <p class="project-type">TIENDA / CATÁLOGO</p>
+                <h3>Nuts</h3>
+              </div>
+              <span class="project-stack">Diseño web · Carrito</span>
+            </div>
+            <p class="project-summary">
+              Una tienda de productos naturales con identidad propia.
+            </p>
+          </article>
+          <article
+            class="project reveal"
+            data-category="platform"
+            style="view-transition-name: project-attache"
+          >
+            <button
+              type="button"
+              class="project-cover cover-attache"
+              data-project="attache"
+              aria-haspopup="dialog"
+              aria-label="Conocer el proyecto Attache"
+            >
+              <span class="cover-topline"
+                ><span>DESARROLLO FULL STACK</span><span>03 / 04</span></span
+              ><span class="attache-wordmark">attaché<span>↗</span></span
+              ><span class="browser-preview"
+                ><span class="browser-bar"
+                  ><i></i><i></i><i></i><span>portfolio / attache</span></span
+                ><img
+                  src="img/attache.png"
+                  width="595"
+                  height="534"
+                  alt=""
+                  loading="lazy"
+                  decoding="async" /></span
+              ><span class="project-open" aria-hidden="true">↗</span>
+            </button>
+            <div class="project-info">
+              <div>
+                <p class="project-type">PORTFOLIO / APLICACIÓN</p>
+                <h3>Attache</h3>
+              </div>
+              <span class="project-stack">Angular · Spring Boot</span>
+            </div>
+            <p class="project-summary">
+              Una experiencia de portfolio con frontend y backend propios.
+            </p>
+          </article>
+          <article
+            class="project reveal"
+            data-category="platform"
+            style="view-transition-name: project-reservas"
+          >
+            <button
+              type="button"
+              class="project-cover cover-reservas"
+              data-project="reservas"
+              aria-haspopup="dialog"
+              aria-label="Conocer el proyecto Sistema de reservas"
+            >
+              <span class="cover-topline"
+                ><span>APLICACIÓN FULL STACK</span><span>04 / 04</span></span
+              ><span class="reserva-graphic"
+                ><span class="reserva-ring ring-one"></span
+                ><span class="reserva-ring ring-two"></span
+                ><span class="reserva-ring ring-three"></span
+                ><span class="reserva-center" aria-hidden="true">↗</span></span
+              ><span class="reserva-title"
+                >ESPACIO<br />PARA <em>CREAR.</em></span
+              ><span class="reserva-note">RESERVAS / REACT + TYPESCRIPT</span
+              ><span class="project-open" aria-hidden="true">↗</span>
+            </button>
+            <div class="project-info">
+              <div>
+                <p class="project-type">APLICACIÓN / API REST</p>
+                <h3>Sistema de reservas</h3>
+              </div>
+              <span class="project-stack">React · Node.js · PostgreSQL</span>
+            </div>
+            <p class="project-summary">
+              Consulta de espacios y creación de reservas desde una aplicación
+              web.
+            </p>
+          </article>
+        </div>
+        <a
+          class="text-link github-more reveal"
+          href="https://github.com/20FacuSam23"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Más código y proyectos en GitHub <span aria-hidden="true">↗</span></a
+        >
       </section>
-    </div>
-  </div>
-</section>
-
-<section id="skills" class="skills">
-  <h2>Mis Habilidades</h2>
-  <p>Una habilidad crucial en el conjunto de habilidades de un diseñador es saber cómo utilizar imágenes, tipografía y otras herramientas para que el espectador "capte el mensaje".</p>
-  
-  <section class="cont-box">
-    <article class="item-skills">
-      <div class="box">
-        <img src="img/angular.png" class="icono" alt="Angular">
-        <div class="bar">
-          <div class="relleno relleno-bar-angular">
-            <p>30%</p>
+      <section
+        class="approach section-spacing"
+        id="enfoque"
+        aria-labelledby="approach-title"
+      >
+        <div class="section-shell">
+          <p class="eyebrow reveal"><span>02 /</span> MI FORMA DE TRABAJAR</p>
+          <h2 class="statement reveal" id="approach-title">
+            Una buena idea<br />merece una <span>buena<br />experiencia.</span>
+          </h2>
+          <div class="approach-bottom">
+            <p class="approach-intro reveal">
+              Me interesa entender el problema, encontrar una forma clara de
+              resolverlo y cuidar cómo se siente usar el resultado.
+            </p>
+            <div class="process">
+              <details class="process-item reveal" open>
+                <summary>
+                  <span class="process-number">01</span><span>Entender</span
+                  ><span class="process-toggle" aria-hidden="true">+</span>
+                </summary>
+                <p>
+                  Escuchar, ordenar lo que hace falta y definir qué necesita
+                  resolver el proyecto antes de empezar a construir.
+                </p>
+              </details>
+              <details class="process-item reveal">
+                <summary>
+                  <span class="process-number">02</span><span>Diseñar</span
+                  ><span class="process-toggle" aria-hidden="true">+</span>
+                </summary>
+                <p>
+                  Dar forma a la información, a la navegación y a una identidad
+                  visual que funcione tanto en el teléfono como en una pantalla
+                  grande.
+                </p>
+              </details>
+              <details class="process-item reveal">
+                <summary>
+                  <span class="process-number">03</span><span>Construir</span
+                  ><span class="process-toggle" aria-hidden="true">+</span>
+                </summary>
+                <p>
+                  Conectar interfaz y datos, probar los recorridos y ajustar los
+                  detalles para que el resultado pueda usarse y seguir
+                  creciendo.
+                </p>
+              </details>
+            </div>
           </div>
         </div>
-      </div>
-      <p>Angular</p>
-    </article>
-    
-    <article class="item-skills">
-      <div class="box">
-        <img src="img/html-5.png" class="icono" alt="HTML5">
-        <div class="bar">
-          <div class="relleno relleno-bar-html-5">
-            <p>40%</p>
+      </section>
+      <section
+        class="about section-shell section-spacing"
+        id="sobre-mi"
+        aria-labelledby="about-title"
+      >
+        <div class="about-portrait reveal">
+          <div class="portrait-frame">
+            <span class="portrait-orbit"></span
+            ><img
+              src="img/ava.png"
+              width="512"
+              height="512"
+              alt="Avatar ilustrado de Facundo, con anteojos y barba"
+              loading="lazy"
+              decoding="async"
+            /><span class="portrait-cross" aria-hidden="true">✳</span>
+          </div>
+          <span class="portrait-caption"
+            >FACUNDO SAMELA ARAGÓN<br />PARANÁ, ENTRE RÍOS / ARGENTINA</span
+          >
+        </div>
+        <div class="about-content">
+          <p class="eyebrow reveal"><span>03 /</span> DETRÁS DEL CÓDIGO</p>
+          <h2 class="reveal" id="about-title">
+            Curiosidad.<br />Criterio.<br /><span class="muted"
+              >Y ganas de hacer.</span
+            >
+          </h2>
+          <p class="about-copy reveal">
+            Soy Facundo Samela Aragón. Me interesa unir desarrollo, diseño y
+            organización para convertir ideas en experiencias que se puedan
+            usar.
+          </p>
+          <p class="about-copy reveal">
+            Trabajo en proyectos propios y sigo ampliando mi formación en
+            programación. Disfruto pensar el conjunto y detenerme en esos
+            detalles que cambian la experiencia.
+          </p>
+          <div class="toolkit reveal">
+            <h3>Herramientas con las que construyo</h3>
+            <ul class="skill-list">
+              <li>HTML & CSS</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>Angular</li>
+              <li>Node.js</li>
+              <li>Spring Boot</li>
+              <li>PostgreSQL</li>
+              <li>Git & GitHub</li>
+              <li>Scrum</li>
+            </ul>
+          </div>
+          <div class="education reveal">
+            <h3>Formación</h3>
+            <div>
+              <span>EN CURSO</span>
+              <p>
+                Tecnicatura Universitaria en Programación<small
+                  >UTN — Facultad Regional Paraná</small
+                >
+              </p>
+            </div>
+            <div>
+              <span>2022</span>
+              <p>
+                Desarrollo Full Stack<small>Programa de formación · INTI</small>
+              </p>
+            </div>
+            <div>
+              <span>2016</span>
+              <p>Metodologías ágiles de desarrollo<small>Scrum · SGM</small></p>
+            </div>
           </div>
         </div>
-      </div>
-      <p>HTML 5</p>
-    </article>
-    
-    <article class="item-skills">
-      <div class="box">
-        <img src="img/css3.png" class="icono" alt="CSS3">
-        <div class="bar">
-          <div class="relleno relleno-bar-css3">
-            <p>30%</p>
+      </section>
+      <section
+        class="contact-section section-spacing"
+        id="contacto"
+        aria-labelledby="contact-title"
+      >
+        <div class="section-shell">
+          <div class="contact-top reveal">
+            <p class="eyebrow"><span>04 /</span> EL PRÓXIMO PROYECTO</p>
+            <p>¿Tenés una idea?<br />Conversemos.</p>
           </div>
-        </div>
-      </div>
-      <p>CSS 3</p>
-    </article>
-    
-    <article class="item-skills">
-      <div class="box">
-        <img src="img/js.png" class="icono" alt="JavaScript">
-        <div class="bar">
-          <div class="relleno relleno-bar-js">
-            <p>50%</p>
+          <a
+            class="contact-title-link"
+            href="mailto:facundo.samela@gmail.com?subject=Contacto%20desde%20el%20portfolio"
+            ><h2 class="contact-title reveal" id="contact-title">
+              HAGAMOS<br />QUE <span>PASE.</span
+              ><span class="contact-arrow" aria-hidden="true">↗</span>
+            </h2></a
+          >
+          <div class="contact-bottom reveal">
+            <a class="contact-email" href="mailto:facundo.samela@gmail.com"
+              >facundo.samela@gmail.com <span aria-hidden="true">↗</span></a
+            ><button
+              class="copy-email"
+              id="copy-email"
+              type="button"
+              data-email="facundo.samela@gmail.com"
+            >
+              Copiar email <span aria-hidden="true">⧉</span>
+            </button>
+            <div class="contact-socials">
+              <a
+                href="https://www.instagram.com/facusam_/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram ↗</a
+              ><a
+                href="https://github.com/20FacuSam23"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub ↗</a
+              ><a
+                href="https://www.linkedin.com/in/facundo-samela-arag%C3%B3n-899026100/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn ↗</a
+              >
+            </div>
           </div>
+          <p
+            class="copy-status sr-only"
+            id="copy-status"
+            role="status"
+            aria-live="polite"
+          ></p>
         </div>
+      </section>
+    </main>
+    <footer class="site-footer section-shell">
+      <a class="footer-signature" href="#inicio">Facu <span>↗</span></a>
+      <p>© <span id="year">2026</span> Facundo Samela Aragón</p>
+      <a href="#inicio">VOLVER ARRIBA <span aria-hidden="true">↑</span></a>
+    </footer>
+    <dialog
+      class="project-dialog"
+      id="project-dialog"
+      aria-labelledby="dialog-title"
+    >
+      <div class="dialog-content">
+        <button
+          class="dialog-close"
+          id="dialog-close"
+          type="button"
+          aria-label="Cerrar detalle del proyecto"
+        >
+          ×
+        </button>
+        <p class="eyebrow" id="dialog-eyebrow"></p>
+        <h2 id="dialog-title"></h2>
+        <p class="dialog-description" id="dialog-description"></p>
+        <ul class="skill-list" id="dialog-stack"></ul>
+        <p class="dialog-note" id="dialog-note"></p>
+        <div class="dialog-actions" id="dialog-actions"></div>
       </div>
-      <p>JavaScript</p>
-    </article>
-    
-    <article class="item-skills">
-      <div class="box">
-        <img src="img/github.png" class="icono" alt="GitHub">
-        <div class="bar">
-          <div class="relleno relleno-bar-github">
-            <p>30%</p>
-          </div>
-        </div>
-      </div>
-      <p>GitHub</p>
-    </article>
-    
-    <article class="item-skills">
-      <div class="box">
-        <img src="img/scrum.png" class="icono" alt="Scrum">
-        <div class="bar">
-          <div class="relleno relleno-bar-scrum">
-            <p>60%</p>
-          </div>
-        </div>
-      </div>
-      <p>Scrum</p>
-    </article>
-  </section>
-</section>
-
-<section id="works" class="works">
-  <h2>Trabajos Recientes</h2>
-  <p>"Plasmamos sus ideas y, por tanto, sus deseos en forma de un proyecto web único que le inspirará a usted y a sus clientes."</p>
-
-  <article class="items-works btn">
-    <a href="#" class="active">Todo</a>
-    <a href="#">Diseño UI/UX</a>
-    <a href="#">Diseño Web</a>
-    <a href="#">Diseño Gráfico</a>
-  </article>
-
-  <article class="ejemplos">
-    <div class="col1">
-      <img class="img-eje" src="img/resentWorkImg1.png" alt="Proyecto 1">
-      <img class="img-eje" src="img/attache.png" alt="Proyecto 2">
-    </div>
-    <div class="col2">
-      <img class="img-eje" src="img/carrito.png" alt="Proyecto 3">
-      <img class="img-eje" src="img/nutProduct.png" alt="Proyecto 4">
-    </div>
-  </article>
-</section>
-
-<section id="contact" class="aboutMe">
-  <article class="fo">
-    <div class="ia">
-      <h3>¡Vamos a trabajar juntos!</h3>
-      <p>Diseño y codifico cosas maravillosamente simples y amo lo que hago. ¡Así de simple!</p>
-    </div>
-    <input class="fn" type="text" placeholder="Nombre">
-    <input class="ln" type="text" placeholder="Apellido">
-    <input class="ea" type="email" placeholder="Email">
-    <input class="pn" type="tel" placeholder="Teléfono">
-    <select class="cs" name="select">
-      <option value="">Seleccionar Servicios</option>
-      <option value="scrum">Scrum</option>
-      <option value="devops">DevOps</option>
-      <option value="diseno">Diseño</option>
-    </select>
-    <textarea class="ym" placeholder="Déjanos un Mensaje"></textarea>
-    <button class="bt btn">Enviar</button>
-  </article>
-  
-  <article class="contact-about">
-    <div class="contact">
-      <span class="material-symbols-outlined btn">
-        <i class="fa-solid fa-phone"></i>
-      </span>
-      <div class="col-contact">
-        <p>Teléfono</p>
-        <strong>+54 9 343 698-5783</strong>
-      </div>
-    </div>
-    
-    <div class="contact">
-      <span class="material-symbols-outlined btn">
-        <i class="fa-solid fa-envelope"></i>
-      </span>
-      <div class="col-contact">
-        <p>E-mail</p>
-        <strong>facusamel@gmail.com</strong>
-      </div>
-    </div>
-    
-    <div class="contact">
-      <span class="material-symbols-outlined btn">
-        <i class="fa-solid fa-location-dot"></i>
-      </span>
-      <div class="col-contact">
-        <p>Localización</p>
-        <strong>Paraná, Entre Ríos</strong>
-      </div>
-    </div>
-  </article>
-</section>
-
-<section class="isologotipo">
-  <img src="img/img-brand.png" class="img-brand" alt="Logo Facundo Aragón">
-  <div>
-    <p class="h1">Facundo</p>
-    <p class="subTit">Aragón</p>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <section class="copyright">
-    <i class="fa-regular fa-copyright"></i>
-    <p>2025 Todos los derechos reservados por Aragón Facundo</p>
-  </section>
-  
-  <section class="nav-footer">
-    <a href="#hero">Inicio</a>
-    <a href="#about">Diseño</a>
-    <a href="#skills">Habilidades</a>
-    <a href="#works">Proyectos</a>
-    <a href="#contact">Contacto</a>
-  </section>
-</footer>
-
-<button class="floating-btn btn-white" onclick="location.href='mailto:facundo.samela@gmail.com?Subject=Contacto%20desde%20portfolio'">
-  <i class="fa-solid fa-envelope"></i>
-</button>
-
-<script>
-  // Menú móvil
-  const menuBtn = document.getElementById('menuBtn');
-  const navMenu = document.getElementById('navMenu');
-  const menuOverlay = document.getElementById('menuOverlay');
-  
-  menuBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    menuOverlay.classList.toggle('active');
-    menuBtn.innerHTML = navMenu.classList.contains('active') 
-      ? '<i class="fa-solid fa-xmark"></i>' 
-      : '<i class="fa-solid fa-bars"></i>';
-  });
-  
-  // Cerrar menú al hacer click en el overlay
-  menuOverlay.addEventListener('click', () => {
-    navMenu.classList.remove('active');
-    menuOverlay.classList.remove('active');
-    menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
-  });
-  
-  // Cerrar menú al hacer click en un enlace
-  document.querySelectorAll('.nav a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
-      menuOverlay.classList.remove('active');
-      menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
-    });
-  });
-</script>
-
-</body>
+    </dialog>
+    <noscript
+      ><style>
+        .motion-toggle,
+        .filters,
+        .copy-email,
+        .menu-toggle {
+          display: none;
+        }
+        .site-header {
+          height: auto;
+          flex-wrap: wrap;
+          padding-block: 18px;
+        }
+        .navigation {
+          display: flex !important;
+          position: static;
+          flex-direction: row;
+          flex-wrap: wrap;
+          width: 100%;
+          padding: 0;
+          max-height: none;
+        }
+        .navigation a {
+          font-size: 13px;
+          padding: 4px;
+        }
+        .project-cover {
+          cursor: default;
+        }
+      </style>
+      <div class="noscript-note section-shell">
+        Podés explorar el código de los proyectos en
+        <a href="https://github.com/20FacuSam23">GitHub</a>. Las animaciones y
+        los detalles interactivos necesitan JavaScript.
+      </div></noscript
+    >
+  </body>
 </html>

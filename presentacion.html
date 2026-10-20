@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es" data-motion="off">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#101014" />
+    <title>Facundo — Ideas en movimiento</title>
+    <meta
+      name="description"
+      content="Una presentación de los proyectos, el diseño y el desarrollo web de Facundo Samela Aragón."
+    />
+    <link
+      rel="canonical"
+      href="https://20facusam23.github.io/portfolio/presentacion.html"
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/estilos.css?v=20261020" />
+    <link rel="stylesheet" href="css/presentacion.css?v=20261020" />
+    <script src="js/scene.js?v=20261020" defer></script>
+    <script src="js/presentacion.js?v=20261020" defer></script>
+  </head>
+  <body class="presentation-page">
+    <header class="presentation-header">
+      <a href="index.html">← Volver al portfolio</a
+      ><span>FACUNDO / EN MOVIMIENTO</span>
+    </header>
+    <main class="reel-frame" aria-label="Presentación del portfolio">
+      <div class="reel-art" aria-hidden="true">
+        <canvas id="reel-canvas"></canvas>
+      </div>
+      <div class="reel-brand" aria-hidden="true">
+        <span>FA↗</span><span>FACUNDO<br />SAMELA ARAGÓN</span>
+      </div>
+      <section
+        class="reel-slide is-current"
+        data-slide="0"
+        aria-labelledby="reel-title-0"
+      >
+        <p class="reel-eyebrow">DESARROLLO WEB & DISEÑO</p>
+        <h1 id="reel-title-0">DE LA<br />IDEA A<br />LO <em>REAL.</em></h1>
+        <span class="reel-star" aria-hidden="true">✳</span>
+        <p class="reel-subtitle">
+          Diseño con intención.<br />Código con criterio.
+        </p>
+      </section>
+      <section
+        class="reel-slide"
+        data-slide="1"
+        aria-labelledby="reel-title-1"
+        hidden
+      >
+        <p class="reel-eyebrow">UNA IDEA. MUCHAS POSIBILIDADES.</p>
+        <h2 id="reel-title-1">DISEÑO.<br />CÓDIGO.<br /><em>CRITERIO.</em></h2>
+        <div class="reel-lines" aria-hidden="true">
+          <span>INTERFACES ↗</span><span>DESARROLLO WEB ↗</span
+          ><span>EXPERIENCIAS ↗</span>
+        </div>
+        <p class="reel-subtitle">
+          Del primer boceto<br />a una experiencia que se usa.
+        </p>
+      </section>
+      <section
+        class="reel-slide"
+        data-slide="2"
+        aria-labelledby="reel-title-2"
+        hidden
+      >
+        <p class="reel-eyebrow">PROYECTOS PROPIOS</p>
+        <h2 id="reel-title-2">IDEAS CON<br /><em>IDENTIDAD.</em></h2>
+        <div class="reel-projects">
+          <div class="reel-project project-purple">
+            <span>PLATAFORMA & COMERCIO</span><strong>datalisting↗</strong>
+          </div>
+          <div class="reel-project project-green">
+            <span>IDENTIDAD & TIENDA</span><strong>nuts✳</strong>
+          </div>
+          <div class="reel-project project-orange">
+            <span>FULL STACK</span><strong>Reservas ↗</strong>
+          </div>
+        </div>
+      </section>
+      <section
+        class="reel-slide"
+        data-slide="3"
+        aria-labelledby="reel-title-3"
+        hidden
+      >
+        <p class="reel-eyebrow">¿TENÉS UNA IDEA?</p>
+        <h2 id="reel-title-3">HAGAMOS<br />QUE<br /><em>PASE.</em></h2>
+        <a class="reel-contact" href="mailto:facundo.samela@gmail.com"
+          >Conversemos ↗</a
+        >
+        <p class="reel-subtitle">
+          Facundo Samela Aragón<br /><a
+            href="https://www.instagram.com/facusam_/"
+            >@facusam_</a
+          >
+        </p>
+      </section>
+      <div class="reel-footer">
+        <a href="index.html">20facusam23.github.io/portfolio</a
+        ><span id="reel-counter" aria-hidden="true">01 / 04</span>
+      </div>
+      <div class="reel-progress" aria-hidden="true">
+        <span id="reel-progress"></span>
+      </div>
+    </main>
+    <div
+      class="presentation-controls"
+      role="group"
+      aria-label="Controles de la presentación"
+    >
+      <button
+        id="reel-previous"
+        type="button"
+        aria-label="Diapositiva anterior"
+      >
+        ←</button
+      ><button id="reel-play" type="button" aria-pressed="false">
+        Reproducir</button
+      ><button id="reel-next" type="button" aria-label="Diapositiva siguiente">
+        →</button
+      ><button id="reel-fullscreen" type="button">Pantalla completa ↗</button>
+    </div>
+    <p class="sr-only" id="reel-status" role="status" aria-live="polite">
+      Presentación detenida. Diapositiva 1 de 4.
+    </p>
+    <noscript
+      ><p class="presentation-noscript">
+        Para reproducir la presentación activá JavaScript.
+        <a href="index.html">Explorar el portfolio</a>.
+      </p></noscript
+    >
+  </body>
+</html>
