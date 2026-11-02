@@ -1,17 +1,21 @@
-/* Consentimiento para visitas públicas. No registra GPS ni datos de formularios. */
+/* Aviso discreto de estadisticas. Sin GPS ni permisos del dispositivo. */
 (() => {
   'use strict';
   const source = document.currentScript;
   const portal = source && source.dataset.portal;
-  const valid = ['a-remarla','nuts','escuela-mayores','aula-generica','tienda-generica','sysacad','portfolio'];
+  const valid = ['a-remarla', 'nuts', 'escuela-mayores', 'aula-generica', 'tienda-generica', 'sysacad', 'portfolio'];
   if (!valid.includes(portal) || location.protocol !== 'https:') return;
-  if (['aula-generica','tienda-generica'].includes(portal) &&
+  if (['aula-generica', 'tienda-generica'].includes(portal) &&
       (new URLSearchParams(location.search).has('portal') || new URLSearchParams(location.search).has('org'))) return;
+
   const noTrack = navigator.globalPrivacyControl === true || navigator.doNotTrack === '1';
   const key = 'dl-visit-permission-v1:' + portal;
-  let choice = null, sent = false;
+  const cityKey = 'dl-visitor-city-v1:' + portal;
+  let choice = null;
+  let sent = false;
   try { choice = localStorage.getItem(key); } catch (_) {}
-  function load() {
+
+  function loadStatistics() {
     if (sent || noTrack) return;
     sent = true;
     const tag = document.createElement('script');
@@ -20,33 +24,115 @@
     tag.async = true;
     document.body.appendChild(tag);
   }
+
   const styles = document.createElement('style');
-  styles.textContent = '.dl-privacy-panel{position:fixed;z-index:2147483000;bottom:16px;left:16px;width:min(380px,calc(100vw - 32px));padding:18px;border:1px solid #b7cfc0;border-radius:15px;box-shadow:0 12px 35px #1117;background:#fff;color:#173e32;font:15px/1.5 system-ui,Arial,sans-serif}.dl-privacy-panel[hidden]{display:none!important}.dl-privacy-panel h2{font:700 18px/1.3 system-ui,Arial,sans-serif;color:#173e32;margin:0 0 8px}.dl-privacy-panel p{font:14px/1.55 system-ui,Arial,sans-serif;color:#365a4b;margin:0 0 13px}.dl-privacy-panel button{font:700 14px system-ui,Arial,sans-serif;padding:11px 12px;border-radius:9px;min-height:44px;cursor:pointer}.dl-privacy-actions{display:flex;gap:8px;flex-wrap:wrap}.dl-privacy-no{border:1px solid #bad2c2;background:#edf5ee;color:#173e32}.dl-privacy-yes{border:1px solid #206249;background:#206249;color:#fff}.dl-privacy-link{display:inline-block;cursor:pointer;color:inherit;background:transparent;border:1px solid currentColor;border-radius:8px;padding:5px 10px;margin:7px;font:inherit;font-size:13px;opacity:.85}.dl-privacy-panel button:focus-visible,.dl-privacy-link:focus-visible{outline:3px solid #e9a54b;outline-offset:3px}';
+  styles.textContent = [
+    '.dl-privacy-panel,.dl-privacy-panel *{box-sizing:border-box}',
+    '.dl-privacy-panel{position:fixed;z-index:2147483000;bottom:12px;left:12px;width:min(370px,calc(100vw - 24px));padding:14px 15px;border:1px solid #dce1e7;border-radius:13px;box-shadow:0 8px 26px #0002;background:#fff;color:#273449;font:13px/1.45 system-ui,Arial,sans-serif}',
+    '.dl-privacy-panel[hidden]{display:none!important}',
+    '.dl-privacy-panel h2{font:700 16px/1.35 system-ui,Arial,sans-serif;color:#202e44;margin:0 0 9px}',
+    '.dl-privacy-panel label{display:block;font-size:13px;font-weight:650;margin:0 0 6px;color:#35445a}',
+    '.dl-privacy-panel input{display:block;width:100%;margin:0 0 10px;border:1px solid #d0d7e1;border-radius:8px;background:#fff;color:#273449;padding:10px 11px;font:13px system-ui,Arial,sans-serif}',
+    '.dl-privacy-panel p{font:12px/1.45 system-ui,Arial,sans-serif;color:#586576;margin:0 0 8px}',
+    '.dl-privacy-actions{display:flex;gap:8px;margin-top:10px}',
+    '.dl-privacy-panel button{font:650 12px/1.35 system-ui,Arial,sans-serif;padding:10px 10px;border-radius:8px;min-height:42px;cursor:pointer;flex:1}',
+    '.dl-privacy-no{border:1px solid #d3dbe6;background:#f6f7f9;color:#334155}',
+    '.dl-privacy-yes{border:1px solid #274e77;background:#274e77;color:#fff}',
+    '.dl-privacy-yes:disabled{opacity:.5;cursor:not-allowed}',
+    '.dl-privacy-details{margin:0}.dl-privacy-details summary{font-size:12px;color:#43617f;cursor:pointer;text-decoration:underline;text-underline-offset:2px}',
+    '.dl-privacy-details p{margin:7px 0 0;font-size:12px;line-height:1.5}',
+    '.dl-privacy-link{display:inline-block;cursor:pointer;color:inherit;background:transparent;border:1px solid currentColor;border-radius:8px;padding:5px 10px;margin:7px;font:inherit;font-size:12px;opacity:.8}',
+    '.dl-privacy-panel button:focus-visible,.dl-privacy-link:focus-visible,.dl-privacy-details summary:focus-visible,.dl-privacy-panel input:focus-visible{outline:2px solid #275e9e;outline-offset:2px}',
+    '@media(max-width:440px){.dl-privacy-panel{bottom:8px;left:8px;width:calc(100vw - 16px);padding:12px}.dl-privacy-actions button{padding:10px 7px}}'
+  ].join('');
   document.head.appendChild(styles);
+
   function start() {
+    if (document.getElementById('dl-privacy-panel')) return;
     const box = document.createElement('section');
     box.className = 'dl-privacy-panel';
     box.id = 'dl-privacy-panel';
-    box.setAttribute('role','region');
-    box.setAttribute('aria-label','Privacidad de la maqueta');
+    box.setAttribute('role', 'region');
+    box.setAttribute('aria-label', 'Bienvenida y preferencias de estadísticas');
+
     const title = document.createElement('h2');
-    title.textContent = 'Privacidad de esta maqueta';
+    title.textContent = '¡Bienvenido!';
+    const label = document.createElement('label');
+    label.textContent = '¿Desde dónde nos visitás? (opcional)';
+    const city = document.createElement('input');
+    city.type = 'text';
+    city.maxLength = 70;
+    city.placeholder = 'Ciudad o localidad';
+    city.autocomplete = 'address-level2';
+    label.appendChild(city);
+
     const message = document.createElement('p');
-    message.textContent = 'Solo si aceptás, Datalisting registrará esta visita: maqueta, página, fecha, tipo de dispositivo e IP cifrada en el servidor. Para seguridad y estadísticas del sitio; no incluye GPS, identidad personal ni datos de formularios. Podés rechazar o cambiar esta opción.';
-    const buttons = document.createElement('div');
-    buttons.className = 'dl-privacy-actions';
-    const no = document.createElement('button'); no.type='button'; no.className='dl-privacy-no'; no.textContent='No compartir';
-    const yes = document.createElement('button'); yes.type='button'; yes.className='dl-privacy-yes'; yes.textContent='Aceptar estadísticas';
-    if (noTrack) {yes.disabled = true; message.textContent += ' Se respeta la señal de no seguimiento activada en tu navegador.';}
-    const trigger = document.createElement('button'); trigger.type='button'; trigger.className='dl-privacy-link'; trigger.textContent='Privacidad'; trigger.setAttribute('aria-controls',box.id);
-    buttons.append(no,yes); box.append(title,message,buttons); document.body.append(box);
+    message.textContent = 'Si aceptás, permitís estadísticas de visitas para mejorar la página.';
+
+    const details = document.createElement('details');
+    details.className = 'dl-privacy-details';
+    const summary = document.createElement('summary');
+    summary.textContent = 'Más información';
+    const explanation = document.createElement('p');
+    explanation.textContent = 'Datalisting registra la página, la fecha, el dispositivo y una IP cifrada al aceptar. No obtiene GPS ni datos de formularios. La localidad que escribas se guarda solo en este navegador, no se envía al servidor. Podés cambiar esta opción desde Privacidad.';
+    details.append(summary, explanation);
+
+    const actions = document.createElement('div');
+    actions.className = 'dl-privacy-actions';
+    const no = document.createElement('button');
+    no.type = 'button';
+    no.className = 'dl-privacy-no';
+    no.textContent = 'Entrar sin compartir';
+    const yes = document.createElement('button');
+    yes.type = 'button';
+    yes.className = 'dl-privacy-yes';
+    yes.textContent = 'Aceptar y entrar';
+    actions.append(no, yes);
+    box.append(title, label, message, details, actions);
+    document.body.appendChild(box);
+
+    const trigger = document.createElement('button');
+    trigger.type = 'button';
+    trigger.className = 'dl-privacy-link';
+    trigger.textContent = 'Privacidad';
+    trigger.setAttribute('aria-controls', box.id);
     const footer = document.querySelector('footer');
-    if (footer) footer.append(trigger); else {trigger.style.position='fixed';trigger.style.bottom='9px';trigger.style.right='9px';trigger.style.zIndex='2147482999';document.body.append(trigger);}
-    trigger.addEventListener('click',()=>box.hidden=!box.hidden);
-    no.addEventListener('click',()=>{choice='no';try{localStorage.setItem(key,choice);}catch(_){}box.hidden=true;});
-    yes.addEventListener('click',()=>{choice='si';try{localStorage.setItem(key,choice);}catch(_){}box.hidden=true;load();});
-    box.hidden = choice!==null || noTrack;
-    if (choice==='si') load();
+    if (footer) footer.appendChild(trigger);
+    else {
+      trigger.style.position = 'fixed';
+      trigger.style.bottom = '6px';
+      trigger.style.right = '8px';
+      trigger.style.zIndex = '2147482999';
+      document.body.appendChild(trigger);
+    }
+
+    trigger.addEventListener('click', () => { box.hidden = !box.hidden; });
+    no.addEventListener('click', () => {
+      choice = 'no';
+      try { localStorage.setItem(key, choice); localStorage.removeItem(cityKey); } catch (_) {}
+      city.value = '';
+      box.hidden = true;
+    });
+    yes.addEventListener('click', () => {
+      if (noTrack) return;
+      choice = 'si';
+      try {
+        localStorage.setItem(key, choice);
+        if (city.value.trim()) localStorage.setItem(cityKey, city.value.trim());
+        else localStorage.removeItem(cityKey);
+      } catch (_) {}
+      box.hidden = true;
+      loadStatistics();
+    });
+
+    if (noTrack) {
+      yes.disabled = true;
+      message.textContent = 'Tu navegador tiene activada la opción de no seguimiento. Podés entrar normalmente.';
+    }
+    box.hidden = choice !== null || noTrack;
+    if (choice === 'si') loadStatistics();
   }
-  if (document.readyState==='loading') document.addEventListener('DOMContentLoaded',start,{once:true}); else start();
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, {once:true});
+  else start();
 })();
