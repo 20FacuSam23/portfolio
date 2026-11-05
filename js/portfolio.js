@@ -157,10 +157,6 @@
           label: "Explorar la demo",
           href: "https://20facusam23.github.io/datalisting-tienda/",
         },
-        {
-          label: "Ver código",
-          href: "https://github.com/20FacuSam23/datalisting-tienda",
-        },
       ],
     },
     nuts: {
@@ -175,10 +171,6 @@
           label: "Explorar la tienda",
           href: "https://20facusam23.github.io/datalisting-tienda/nuts/",
         },
-        {
-          label: "Ver código",
-          href: "https://github.com/20FacuSam23/datalisting-tienda/tree/main/nuts",
-        },
       ],
     },
     attache: {
@@ -187,17 +179,8 @@
       description:
         "Un proyecto de portfolio desarrollado con una interfaz en Angular y un backend en Spring Boot. Una exploración de la presentación personal, la formación, la experiencia y las habilidades dentro de una aplicación web.",
       stack: ["Angular", "Spring Boot", "Java", "Frontend & backend"],
-      note: "La captura muestra una etapa anterior de la interfaz. Los repositorios permiten explorar el desarrollo; no se presenta como un servicio desplegado actualmente.",
-      links: [
-        {
-          label: "Ver frontend",
-          href: "https://github.com/20FacuSam23/Portfolio-FrontEnd-Angular",
-        },
-        {
-          label: "Ver backend",
-          href: "https://github.com/20FacuSam23/Attache-BackEnd-SpringBoot",
-        },
-      ],
+      note: "La captura corresponde a una etapa anterior del diseño. No hay una demostración pública disponible actualmente.",
+      links: [],
     },
     reservas: {
       eyebrow: "04 / APLICACIÓN & API",
@@ -205,13 +188,8 @@
       description:
         "Una aplicación full stack para consultar espacios disponibles y crear reservas. El frontend consume una API REST y contempla estados de la interfaz y validaciones de los datos ingresados.",
       stack: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL"],
-      note: "Proyecto de práctica técnica. El repositorio incluye las instrucciones para ejecutarlo. La portada es una composición gráfica, no una captura de la aplicación.",
-      links: [
-        {
-          label: "Explorar el proyecto",
-          href: "https://github.com/20FacuSam23/reservas-fullstack",
-        },
-      ],
+      note: "Proyecto de práctica técnica. La portada es una composición gráfica, no una captura de la aplicación. No hay una demostración pública disponible actualmente.",
+      links: [],
     },
   };
   const dialog = document.getElementById("project-dialog");
@@ -221,7 +199,7 @@
       const project = projects[button.dataset.project];
       if (!project) return;
       if (!dialog || typeof dialog.showModal !== "function") {
-        window.location.assign(project.links[0].href);
+        if (project.links.length) window.location.assign(project.links[0].href);
         return;
       }
       previousFocus = button;
@@ -239,6 +217,7 @@
         }),
       );
       const actions = document.getElementById("dialog-actions");
+      actions.hidden = project.links.length === 0;
       actions.replaceChildren(
         ...project.links.map((item, index) => {
           const link = document.createElement("a");
