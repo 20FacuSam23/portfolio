@@ -2265,3 +2265,26 @@ body.menu-open {
 @media (prefers-reduced-motion: reduce) {
   .showcase-browser, .showcase-viewport > a > span { transition: none; }
 }
+
+
+/* Portfolio: texto controlado y sin enlaces de código expuestos */
+.project-grid > *, .showcase-grid > *, .showcase-card, .project, .project-info,
+.showcase-heading, .showcase-intro > *, .about-content, .dialog-content,
+.dialog-description, .dialog-note { min-width: 0; }
+.project-info, .project-info h3, .project-type, .project-stack, .project-summary,
+.showcase-heading h2, .showcase-intro p, .dialog-description, .dialog-note,
+.project-dialog h2, .dialog-actions, .about-content, .about-copy,
+.contact-bottom { overflow-wrap: break-word; }
+.project-dialog { max-width: min(92vw, 780px); max-height: 92dvh; overflow-x: hidden; overflow-y: auto; }
+.dialog-content { max-width: 100%; }
+.dialog-actions .button { max-width: 100%; white-space: normal; text-align: center; }
+.project-info > div { min-width: 0; flex: 1 1 auto; }
+.project-stack { flex-shrink: 1; }
+.showcase-browser-bar > span:nth-child(2) { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media(max-width: 520px) {
+ .project-info { align-items: flex-start; }
+ .project-stack { max-width: 48%; }
+ .dialog-content { padding: 50px 20px 26px; }
+ .project-dialog h2 { font-size: clamp(29px, 9vw, 45px); }
+ .showcase-intro h2 { font-size: clamp(35px, 10vw, 57px); }
+}
