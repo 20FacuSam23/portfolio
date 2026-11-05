@@ -63,7 +63,7 @@ html.reel-lab ::selection{background:#5de8ff;color:#071525}
 .reel-lab .lab-crosshair--b{right:1.15vw;bottom:17%;animation-delay:3s}
 .reel-lab .lab-hud{position:absolute;bottom:19%;left:clamp(15px,3vw,46px);
   color:#79c9f5b3;writing-mode:vertical-rl;letter-spacing:.28em;font:500 9px monospace;}
-.reel-lab .lab-cursor-field{position:absolute;inset:0;overflow:hidden;opacity:0;
+.reel-lab .lab-cursor-field{position:absolute;inset:0;overflow:hidden;opacity:1;
   transition:opacity .3s ease;contain:layout style paint}
 .reel-lab .lab-cursor-field.is-tracking{opacity:1}
 .reel-lab .lab-cursor{position:absolute;top:0;left:0;width:11px;height:15px;opacity:.88;
@@ -72,10 +72,11 @@ html.reel-lab ::selection{background:#5de8ff;color:#071525}
 .reel-lab .lab-cursor:nth-child(3n){width:8px;height:11px}
 .reel-lab .lab-cursor:nth-child(4n){width:13px;height:17px}
 .reel-lab .lab-cursor-field.is-pressed .lab-cursor{filter:drop-shadow(0 0 10px var(--lab-col,#5defff))}
-.reel-lab .lab-cursor-focus{position:absolute;top:0;left:0;width:40px;height:40px;
-  border:1px solid #5deaff80;border-radius:50%;opacity:.55;
+.reel-lab .lab-cursor-focus{position:absolute;top:0;left:0;width:40px;height:40px;opacity:0;
+  border:1px solid #5deaff80;border-radius:50%;
   box-shadow:0 0 18px #5deaff33,inset 0 0 12px #5deaff14;pointer-events:none;
   transition:width .16s,height .16s,border-color .16s;will-change:transform}
+.reel-lab .lab-cursor-field.is-tracking .lab-cursor-focus{opacity:.55}
 .reel-lab .lab-cursor-field.is-pressed .lab-cursor-focus{border-color:#bafff9;box-shadow:0 0 25px #5deaff66,inset 0 0 12px #5deaff30}
 /* DOM overlay inside hero */
 .reel-lab .lab-orbit{position:absolute;width:48%;height:57%;left:49%;top:17%;
@@ -193,3 +194,6 @@ html.reel-lab[data-motion="off"] .lab-intro-screen{display:none}
  .reel-lab .lab-cursor,.reel-lab .lab-browser,.reel-lab .lab-orbit,.reel-lab .lab-scanline{animation:none!important}
  .reel-lab .lab-intro-screen{display:none!important}
 }
+
+html.reel-lab[data-motion="off"] .lab-cursor-field{opacity:0!important}
+@media(prefers-reduced-motion:reduce){.reel-lab .lab-cursor-field{opacity:0!important}}
