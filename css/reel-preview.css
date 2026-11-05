@@ -63,14 +63,20 @@ html.reel-lab ::selection{background:#5de8ff;color:#071525}
 .reel-lab .lab-crosshair--b{right:1.15vw;bottom:17%;animation-delay:3s}
 .reel-lab .lab-hud{position:absolute;bottom:19%;left:clamp(15px,3vw,46px);
   color:#79c9f5b3;writing-mode:vertical-rl;letter-spacing:.28em;font:500 9px monospace;}
-.reel-lab .lab-cursor-field{position:absolute;inset:0}
-.reel-lab .lab-cursor{position:absolute;width:10px;height:13px;opacity:.88;
+.reel-lab .lab-cursor-field{position:absolute;inset:0;overflow:hidden;opacity:0;
+  transition:opacity .3s ease;contain:layout style paint}
+.reel-lab .lab-cursor-field.is-tracking{opacity:1}
+.reel-lab .lab-cursor{position:absolute;top:0;left:0;width:11px;height:15px;opacity:.88;
   clip-path:polygon(0 0,94% 75%,54% 76%,37% 100%);background:var(--lab-col,#5defff);
-  filter:drop-shadow(0 0 6px var(--lab-col,#5defff));
-  animation:lab-cursor-flight var(--lab-duration,13s) linear infinite;
-  animation-delay:var(--lab-delay,-3s);transform:translate3d(0,0,0) rotate(var(--lab-rot,30deg))}
-.reel-lab .lab-cursor:nth-child(3n){width:7px;height:9px}
+  filter:drop-shadow(0 0 6px var(--lab-col,#5defff));will-change:transform}
+.reel-lab .lab-cursor:nth-child(3n){width:8px;height:11px}
 .reel-lab .lab-cursor:nth-child(4n){width:13px;height:17px}
+.reel-lab .lab-cursor-field.is-pressed .lab-cursor{filter:drop-shadow(0 0 10px var(--lab-col,#5defff))}
+.reel-lab .lab-cursor-focus{position:absolute;top:0;left:0;width:40px;height:40px;
+  border:1px solid #5deaff80;border-radius:50%;opacity:.55;
+  box-shadow:0 0 18px #5deaff33,inset 0 0 12px #5deaff14;pointer-events:none;
+  transition:width .16s,height .16s,border-color .16s;will-change:transform}
+.reel-lab .lab-cursor-field.is-pressed .lab-cursor-focus{border-color:#bafff9;box-shadow:0 0 25px #5deaff66,inset 0 0 12px #5deaff30}
 /* DOM overlay inside hero */
 .reel-lab .lab-orbit{position:absolute;width:48%;height:57%;left:49%;top:17%;
    border:1px dashed #47a5e044;border-radius:50%;transform:rotate(-25deg);pointer-events:none;
@@ -149,7 +155,6 @@ html.reel-lab .lab-trace::after{right:-5px;bottom:-5px;border-left:0;border-top:
 .reel-lab .lab-intro-progress i{display:block;width:100%;height:100%;background:linear-gradient(90deg,#3f98fc,#6ff9ee);
   transform-origin:left;animation:lab-load 2s cubic-bezier(.24,.74,.4,1) forwards}
 @keyframes lab-load{0%{transform:scaleX(.01)}100%{transform:scaleX(1)}}
-@keyframes lab-cursor-flight{0%{translate:0 0;opacity:0}8%{opacity:.9}50%{translate:35px -50px}90%{opacity:.65}100%{translate:100px -125px;opacity:0}}
 @keyframes lab-orbit-rotate{to{transform:rotate(335deg)}}
 @keyframes lab-blink{0%,95%,100%{opacity:.7}96%,98%{opacity:0}}
 @keyframes lab-float{50%{transform:perspective(900px) rotateY(-14deg) rotateX(4deg) rotateZ(-2deg) translateY(-15px)}}
@@ -159,7 +164,6 @@ html.reel-lab .lab-trace::after{right:-5px;bottom:-5px;border-left:0;border-top:
  html.reel-lab .hero-art{opacity:.7}
 }
 @media(max-width:760px){
- .reel-lab .lab-overlay .lab-cursor:nth-child(n+9){display:none}
  .reel-lab .lab-browser{width:48vw;height:170px;top:18%;right:-8%;opacity:.46}
  .reel-lab .lab-browser__body{padding:12px;gap:8px}
  .reel-lab .lab-browser__grid span{height:18px}
