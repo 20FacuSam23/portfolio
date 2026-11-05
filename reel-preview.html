@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="es" data-motion="on" class="reel-lab">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101014" />
+    <title>Portfolio · Estudio cinematográfico / Vista previa</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <meta
+      name="description"
+      content="Portfolio de Facundo Aragón. Desarrollo web, diseño de interfaces y proyectos propios desde Paraná, Argentina."
+    />
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+    <meta
+      property="og:title"
+      content="Facundo Aragón — De la idea a lo real."
+    />
+    <meta
+      property="og:description"
+      content="Desarrollo web, diseño y proyectos propios. Conocé lo que estoy construyendo."
+    />
+    <meta
+      property="og:url"
+      content="https://20facusam23.github.io/portfolio/"
+    />
+    <meta
+      property="og:image"
+      content="https://20facusam23.github.io/portfolio/assets/compartir.png?v=facundo-aragon"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/fonts/space-grotesk-variable.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="css/estilos.css?v=20261020-vistas" />
+    <link rel="stylesheet" href="css/reel-preview.css?v=20261105-1" />
+    <script>
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+        document.documentElement.dataset.motion = "off";
+    </script>
+    <script src="js/scene.js?v=20261020-fa" defer></script>
+    <script src="js/portfolio.js?v=20261020-fa" defer></script>
+    <script src="js/reel-preview.js?v=20261105-1" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <div class="page-progress" aria-hidden="true"><span></span></div>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Facundo Aragón, inicio"
+        ><span class="brand-mark">FA<span>↗</span></span
+        ><span class="brand-caption">FACUNDO<br />ARAGÓN</span></a
+      >
+      <nav class="navigation" id="navigation" aria-label="Navegación principal">
+        <a href="#proyectos">Proyectos<span>01</span></a
+        ><a href="#enfoque">Enfoque<span>02</span></a
+        ><a href="#sobre-mi">Sobre mí<span>03</span></a
+        ><a href="#contacto" class="nav-contact"
+          >Hablemos <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+      <div class="header-actions">
+        <button
+          class="motion-toggle"
+          id="motion-toggle"
+          type="button"
+          aria-pressed="false"
+          aria-label="Pausar animaciones"
+          title="Pausar animaciones"
+        >
+          <span class="motion-icon" aria-hidden="true"><i></i><i></i></span
+          ><span class="motion-label">Movimiento</span>
+        </button>
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-controls="navigation"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <button
+      class="menu-scrim"
+      id="menu-scrim"
+      type="button"
+      aria-label="Cerrar menú"
+      tabindex="-1"
+      hidden
+    ></button>
+    <main id="main">
+      <section
+        class="hero section-shell"
+        id="inicio"
+        aria-labelledby="hero-title"
+      >
+        <div class="hero-topline">
+          <span
+            ><i class="status-dot" aria-hidden="true"></i> DESARROLLO WEB &
+            DISEÑO</span
+          ><span>PARANÁ, ARGENTINA <span aria-hidden="true">↗</span></span>
+        </div>
+        <div class="hero-content">
+          <p class="hero-intro enter">Hola, soy Facundo.</p>
+          <h1 class="hero-title" id="hero-title">
+            <span class="title-mask"><span>DE LA IDEA</span></span
+            ><span class="title-mask"
+              ><span
+                >A LO <em>REAL.</em
+                ><span class="title-star" aria-hidden="true">✳</span></span
+              ></span
+            >
+          </h1>
+          <p class="hero-description enter">
+            Desarrollo experiencias web.<br />Con diseño, código y atención al
+            detalle.
+          </p>
+          <div class="hero-actions enter">
+            <a class="button button-primary magnetic" href="#proyectos"
+              >Explorá mis proyectos <span aria-hidden="true">↗</span></a
+            ><a class="reel-link" href="presentacion.html"
+              ><span class="play-icon" aria-hidden="true">▶</span> Ver
+              presentación</a
+            >
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-glow"></div>
+          <svg class="art-fallback" viewBox="0 0 600 600" fill="none">
+            <ellipse
+              cx="300"
+              cy="300"
+              rx="220"
+              ry="135"
+              transform="rotate(-38 300 300)"
+              stroke="#a48aff"
+              stroke-width="3"
+            />
+            <ellipse
+              cx="300"
+              cy="300"
+              rx="200"
+              ry="115"
+              transform="rotate(35 300 300)"
+              stroke="#625087"
+              stroke-width="2"
+            />
+            <ellipse
+              cx="300"
+              cy="300"
+              rx="180"
+              ry="160"
+              transform="rotate(70 300 300)"
+              stroke="#cbbaff"
+              stroke-width="2"
+            />
+          </svg>
+          <canvas id="hero-canvas"></canvas
+          ><span class="art-cross cross-one">+</span
+          ><span class="art-cross cross-two">+</span
+          ><span class="art-coordinate">IDEAS EN<br />MOVIMIENTO.</span
+          ><span class="art-index">FA / 2026</span>
+        </div>
+        <div class="hero-bottom">
+          <span>DISEÑO CON INTENCIÓN.<br />CÓDIGO CON CRITERIO.</span
+          ><a class="scroll-cue" href="#proyectos"
+            >SEGUÍ EXPLORANDO <span aria-hidden="true">↓</span></a
+          ><span class="hero-edition">PORTFOLIO<br />EDICIÓN 2026</span>
+        </div>
+      </section>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span
+            >DISEÑAR <i>✳</i> DESARROLLAR <i>✳</i> CONECTAR <i>✳</i> DAR FORMA
+            <i>✳</i> </span
+          ><span
+            >DISEÑAR <i>✳</i> DESARROLLAR <i>✳</i> CONECTAR <i>✳</i> DAR FORMA
+            <i>✳</i>
+          </span>
+        </div>
+      </div>
+      <section
+        class="work-section section-shell section-spacing"
+        id="proyectos"
+        aria-labelledby="work-title"
+      >
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span>01 /</span> PROYECTOS SELECCIONADOS</p>
+          <h2 id="work-title">
+            Lo que estoy<br /><span class="muted">construyendo.</span>
+          </h2>
+          <p class="section-description">
+            Plataformas, tiendas e interfaces.<br />Cada proyecto, una forma de
+            resolver.
+          </p>
+        </div>
+        <div class="work-toolbar reveal">
+          <div class="filters" role="group" aria-label="Filtrar proyectos">
+            <button type="button" data-filter="all" aria-pressed="true">
+              Todos <span>04</span></button
+            ><button type="button" data-filter="platform" aria-pressed="false">
+              Plataformas</button
+            ><button type="button" data-filter="commerce" aria-pressed="false">
+              Comercio
+            </button>
+          </div>
+          <span class="toolbar-note"
+            >EXPLORÁ CADA PROYECTO <span aria-hidden="true">↘</span></span
+          >
+        </div>
+        <p
+          class="sr-only"
+          id="filter-status"
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          4 proyectos disponibles
+        </p>
+        <div class="project-grid">
+          <article
+            class="project reveal"
+            data-category="platform commerce"
+            style="view-transition-name: project-datalisting"
+          >
+            <button
+              type="button"
+              class="project-cover cover-datalisting"
+              data-project="datalisting"
+              aria-haspopup="dialog"
+              aria-label="Conocer el proyecto Datalisting"
+            >
+              <span class="cover-topline"
+                ><span>PROYECTO PROPIO</span><span>01 / 04</span></span
+              ><span class="datalisting-art"
+                ><span class="datalisting-orbit orbit-a"></span
+                ><span class="datalisting-orbit orbit-b"></span
+                ><span class="datalisting-orbit orbit-c"></span
+                ><span class="datalisting-symbol">d<span>↗</span></span
+                ><span class="floating-label label-one">TIENDAS</span
+                ><span class="floating-label label-two">PERSONAS</span
+                ><span class="floating-label label-three"
+                  >CONEXIONES</span
+                ></span
+              ><span class="cover-wordmark">datalisting</span
+              ><span class="project-open" aria-hidden="true">↗</span>
+            </button>
+            <div class="project-info">
+              <div>
+                <p class="project-type">PLATAFORMA WEB / COMERCIO</p>
+                <h3>Datalisting</h3>
+              </div>
+              <span class="project-stack">HTML · JavaScript · API</span>
+            </div>
+            <p class="project-summary">
+              Identidad, catálogos y tiendas conectadas en un proyecto propio.
+            </p>
+          </article>
+          <article
+            class="project reveal"
+            data-category="commerce"
+            style="view-transition-name: project-nuts"
+          >
+            <button
+              type="button"
+              class="project-cover cover-nuts"
+              data-project="nuts"
+              aria-haspopup="dialog"
+              aria-label="Conocer el proyecto Nuts"
+            >
+              <span class="cover-topline"
+                ><span>IDENTIDAD & TIENDA</span><span>02 / 04</span></span
+              ><span class="nuts-display"
+                ><span class="nuts-brand">nuts<span>✳</span></span
+                ><span class="nuts-caption"
+                  >SIMPLE.<br />NATURAL.<br />CONECTADO.</span
+                ><span class="nuts-preview"
+                  ><img
+                    src="img/nutProduct.png"
+                    width="734"
+                    height="720"
+                    alt=""
+                    loading="lazy"
+                    decoding="async" /></span></span
+              ><span class="project-open" aria-hidden="true">↗</span>
+            </button>
+            <div class="project-info">
+              <div>
+                <p class="project-type">TIENDA / CATÁLOGO</p>
+                <h3>Nuts</h3>
+              </div>
+              <span class="project-stack">Diseño web · Carrito</span>
+            </div>
+            <p class="project-summary">
+              Una tienda de productos naturales con identidad propia.
+            </p>
+          </article>
+          <article
+            class="project reveal"
+            data-category="platform"
+            style="view-transition-name: project-attache"
+          >
+            <button
+              type="button"
+              class="project-cover cover-attache"
+              data-project="attache"
+              aria-haspopup="dialog"
+              aria-label="Conocer el proyecto Attache"
+            >
+              <span class="cover-topline"
+                ><span>DESARROLLO FULL STACK</span><span>03 / 04</span></span
+              ><span class="attache-wordmark">attaché<span>↗</span></span
+              ><span class="browser-preview"
+                ><span class="browser-bar"
+                  ><i></i><i></i><i></i><span>portfolio / attache</span></span
+                ><img
+                  src="img/attache.png"
+                  width="595"
+                  height="534"
+                  alt=""
+                  loading="lazy"
+                  decoding="async" /></span
+              ><span class="project-open" aria-hidden="true">↗</span>
+            </button>
+            <div class="project-info">
+              <div>
+                <p class="project-type">PORTFOLIO / APLICACIÓN</p>
+                <h3>Attache</h3>
+              </div>
+              <span class="project-stack">Angular · Spring Boot</span>
+            </div>
+            <p class="project-summary">
+              Una experiencia de portfolio con frontend y backend propios.
+            </p>
+          </article>
+          <article
+            class="project reveal"
+            data-category="platform"
+            style="view-transition-name: project-reservas"
+          >
+            <button
+              type="button"
+              class="project-cover cover-reservas"
+              data-project="reservas"
+              aria-haspopup="dialog"
+              aria-label="Conocer el proyecto Sistema de reservas"
+            >
+              <span class="cover-topline"
+                ><span>APLICACIÓN FULL STACK</span><span>04 / 04</span></span
+              ><span class="reserva-graphic"
+                ><span class="reserva-ring ring-one"></span
+                ><span class="reserva-ring ring-two"></span
+                ><span class="reserva-ring ring-three"></span
+                ><span class="reserva-center" aria-hidden="true">↗</span></span
+              ><span class="reserva-title"
+                >ESPACIO<br />PARA <em>CREAR.</em></span
+              ><span class="reserva-note">RESERVAS / REACT + TYPESCRIPT</span
+              ><span class="project-open" aria-hidden="true">↗</span>
+            </button>
+            <div class="project-info">
+              <div>
+                <p class="project-type">APLICACIÓN / API REST</p>
+                <h3>Sistema de reservas</h3>
+              </div>
+              <span class="project-stack">React · Node.js · PostgreSQL</span>
+            </div>
+            <p class="project-summary">
+              Consulta de espacios y creación de reservas desde una aplicación
+              web.
+            </p>
+          </article>
+        </div>
+        <a
+          class="text-link github-more reveal"
+          href="https://github.com/20FacuSam23"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Más código y proyectos en GitHub <span aria-hidden="true">↗</span></a
+        >
+      </section>
+      <section
+        class="showcase section-shell section-spacing"
+        id="muestras"
+        aria-labelledby="showcase-title"
+      >
+        <div class="showcase-heading reveal">
+          <p class="eyebrow"><span>01B /</span> PROYECTOS PUBLICADOS · OCTUBRE 2026</p>
+          <div class="showcase-intro">
+            <h2 id="showcase-title">No solo ideas.<br /><em>Páginas reales.</em></h2>
+            <p>
+              Una mirada a las interfaces que desarrollé esta semana.
+              Las vistas muestran las versiones públicas, sin ingresar a cuentas privadas.
+            </p>
+          </div>
+        </div>
+        <div class="showcase-grid">
+          <article class="showcase-card reveal">
+            <div class="showcase-browser">
+              <div class="showcase-browser-bar" aria-hidden="true">
+                <span class="showcase-dots"><i></i><i></i><i></i></span>
+                <span>20facusam23.github.io / datalisting-aula / a-remarla</span>
+                <span class="showcase-arrow">↗</span>
+              </div>
+              <div class="showcase-viewport">
+                <iframe
+                  title="Vista de la portada pública de A Remarla"
+                  src="https://20facusam23.github.io/datalisting-aula/a-remarla/?vista=portfolio"
+                  loading="lazy"
+                  tabindex="-1"
+                  aria-hidden="true"
+                  referrerpolicy="no-referrer"
+                  sandbox="allow-scripts"
+                ></iframe>
+                <a href="https://20facusam23.github.io/datalisting-aula/a-remarla/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Abrir la página pública de A Remarla en una nueva pestaña">
+                  <span>VISITAR A REMARLA <b>↗</b></span>
+                </a>
+              </div>
+            </div>
+            <div class="showcase-card-meta">
+              <div><p>01 / ESCUELA · PORTAL</p><h3>A Remarla</h3></div>
+              <span>Kayak & SUP</span>
+            </div>
+            <p class="showcase-summary">Identidad de escuela, servicios, meteorología y acceso al aula.</p>
+          </article>
+          <article class="showcase-card reveal">
+            <div class="showcase-browser">
+              <div class="showcase-browser-bar" aria-hidden="true">
+                <span class="showcase-dots"><i></i><i></i><i></i></span>
+                <span>20facusam23.github.io / datalisting-tienda / nuts</span>
+                <span class="showcase-arrow">↗</span>
+              </div>
+              <div class="showcase-viewport">
+                <iframe
+                  title="Vista de la tienda pública Nuts"
+                  src="https://20facusam23.github.io/datalisting-tienda/nuts/?vista=portfolio"
+                  loading="lazy"
+                  tabindex="-1"
+                  aria-hidden="true"
+                  referrerpolicy="no-referrer"
+                  sandbox="allow-scripts"
+                ></iframe>
+                <a href="https://20facusam23.github.io/datalisting-tienda/nuts/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Abrir la tienda Nuts en una nueva pestaña">
+                  <span>VISITAR NUTS <b>↗</b></span>
+                </a>
+              </div>
+            </div>
+            <div class="showcase-card-meta">
+              <div><p>02 / COMERCIO · IDENTIDAD</p><h3>Nuts</h3></div>
+              <span>Tienda web</span>
+            </div>
+            <p class="showcase-summary">Una tienda con diseño propio, catálogo y recorrido de compra.</p>
+          </article>
+          <article class="showcase-card reveal">
+            <div class="showcase-browser">
+              <div class="showcase-browser-bar" aria-hidden="true">
+                <span class="showcase-dots"><i></i><i></i><i></i></span>
+                <span>20facusam23.github.io / datalisting-aula</span>
+                <span class="showcase-arrow">↗</span>
+              </div>
+              <div class="showcase-viewport">
+                <iframe
+                  title="Vista del portal público Aula Datalisting"
+                  src="https://20facusam23.github.io/datalisting-aula/?vista=portfolio"
+                  loading="lazy"
+                  tabindex="-1"
+                  aria-hidden="true"
+                  referrerpolicy="no-referrer"
+                  sandbox="allow-scripts"
+                ></iframe>
+                <a href="https://20facusam23.github.io/datalisting-aula/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Abrir la demostración pública Aula Datalisting en una nueva pestaña">
+                  <span>VER AULA DATALISTING <b>↗</b></span>
+                </a>
+              </div>
+            </div>
+            <div class="showcase-card-meta">
+              <div><p>03 / EDUCACIÓN · PLATAFORMA</p><h3>Aula Datalisting</h3></div>
+              <span>Educación digital</span>
+            </div>
+            <p class="showcase-summary">La experiencia educativa modular y su interfaz pública.</p>
+          </article>
+          <article class="showcase-card reveal">
+            <div class="showcase-browser">
+              <div class="showcase-browser-bar" aria-hidden="true">
+                <span class="showcase-dots"><i></i><i></i><i></i></span>
+                <span>20facusam23.github.io / datalisting-tienda</span>
+                <span class="showcase-arrow">↗</span>
+              </div>
+              <div class="showcase-viewport">
+                <iframe
+                  title="Vista de la tienda pública Datalisting"
+                  src="https://20facusam23.github.io/datalisting-tienda/?vista=portfolio"
+                  loading="lazy"
+                  tabindex="-1"
+                  aria-hidden="true"
+                  referrerpolicy="no-referrer"
+                  sandbox="allow-scripts"
+                ></iframe>
+                <a href="https://20facusam23.github.io/datalisting-tienda/"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Abrir la demostración de tienda Datalisting en una nueva pestaña">
+                  <span>VER TIENDA DATALISTING <b>↗</b></span>
+                </a>
+              </div>
+            </div>
+            <div class="showcase-card-meta">
+              <div><p>04 / COMERCIO · PLATAFORMA</p><h3>Tienda Datalisting</h3></div>
+              <span>Catálogos web</span>
+            </div>
+            <p class="showcase-summary">Una vidriera adaptable con conexión al catálogo y pedidos.</p>
+          </article>
+        </div>
+        <p class="showcase-footnote">Muestras integradas de páginas públicas. Para recorrer cada sitio con todas sus funciones, abrilo en una pestaña nueva. Las secciones privadas requieren autorización.</p>
+      </section>
+      <section
+        class="approach section-spacing"
+        id="enfoque"
+        aria-labelledby="approach-title"
+      >
+        <div class="section-shell">
+          <p class="eyebrow reveal"><span>02 /</span> MI FORMA DE TRABAJAR</p>
+          <h2 class="statement reveal" id="approach-title">
+            Una buena idea<br />merece una <span>buena<br />experiencia.</span>
+          </h2>
+          <div class="approach-bottom">
+            <p class="approach-intro reveal">
+              Me interesa entender el problema, encontrar una forma clara de
+              resolverlo y cuidar cómo se siente usar el resultado.
+            </p>
+            <div class="process">
+              <details class="process-item reveal" open>
+                <summary>
+                  <span class="process-number">01</span><span>Entender</span
+                  ><span class="process-toggle" aria-hidden="true">+</span>
+                </summary>
+                <p>
+                  Escuchar, ordenar lo que hace falta y definir qué necesita
+                  resolver el proyecto antes de empezar a construir.
+                </p>
+              </details>
+              <details class="process-item reveal">
+                <summary>
+                  <span class="process-number">02</span><span>Diseñar</span
+                  ><span class="process-toggle" aria-hidden="true">+</span>
+                </summary>
+                <p>
+                  Dar forma a la información, a la navegación y a una identidad
+                  visual que funcione tanto en el teléfono como en una pantalla
+                  grande.
+                </p>
+              </details>
+              <details class="process-item reveal">
+                <summary>
+                  <span class="process-number">03</span><span>Construir</span
+                  ><span class="process-toggle" aria-hidden="true">+</span>
+                </summary>
+                <p>
+                  Conectar interfaz y datos, probar los recorridos y ajustar los
+                  detalles para que el resultado pueda usarse y seguir
+                  creciendo.
+                </p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="about section-shell section-spacing"
+        id="sobre-mi"
+        aria-labelledby="about-title"
+      >
+        <div class="about-portrait reveal">
+          <div class="portrait-frame">
+            <span class="portrait-orbit"></span
+            ><img
+              src="img/ava.png"
+              width="512"
+              height="512"
+              alt="Avatar ilustrado de Facundo, con anteojos y barba"
+              loading="lazy"
+              decoding="async"
+            /><span class="portrait-cross" aria-hidden="true">✳</span>
+          </div>
+          <span class="portrait-caption"
+            >FACUNDO ARAGÓN<br />PARANÁ, ENTRE RÍOS / ARGENTINA</span
+          >
+        </div>
+        <div class="about-content">
+          <p class="eyebrow reveal"><span>03 /</span> DETRÁS DEL CÓDIGO</p>
+          <h2 class="reveal" id="about-title">
+            Curiosidad.<br />Criterio.<br /><span class="muted"
+              >Y ganas de hacer.</span
+            >
+          </h2>
+          <p class="about-copy reveal">
+            Soy Facundo Aragón. Me interesa unir desarrollo, diseño y
+            organización para convertir ideas en experiencias que se puedan
+            usar.
+          </p>
+          <p class="about-copy reveal">
+            Trabajo en proyectos propios y sigo ampliando mi formación en
+            programación. Disfruto pensar el conjunto y detenerme en esos
+            detalles que cambian la experiencia.
+          </p>
+          <div class="toolkit reveal">
+            <h3>Herramientas con las que construyo</h3>
+            <ul class="skill-list">
+              <li>HTML & CSS</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>Angular</li>
+              <li>Node.js</li>
+              <li>Spring Boot</li>
+              <li>PostgreSQL</li>
+              <li>Git & GitHub</li>
+              <li>Scrum</li>
+            </ul>
+          </div>
+          <div class="education reveal">
+            <h3>Formación</h3>
+            <div>
+              <span>EN CURSO</span>
+              <p>
+                Tecnicatura Universitaria en Programación<small
+                  >UTN — Facultad Regional Paraná</small
+                >
+              </p>
+            </div>
+            <div>
+              <span>2022</span>
+              <p>
+                Desarrollo Full Stack<small>Programa de formación · INTI</small>
+              </p>
+            </div>
+            <div>
+              <span>2016</span>
+              <p>Metodologías ágiles de desarrollo<small>Scrum · SGM</small></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="contact-section section-spacing"
+        id="contacto"
+        aria-labelledby="contact-title"
+      >
+        <div class="section-shell">
+          <div class="contact-top reveal">
+            <p class="eyebrow"><span>04 /</span> EL PRÓXIMO PROYECTO</p>
+            <p>¿Tenés una idea?<br />Conversemos.</p>
+          </div>
+          <a
+            class="contact-title-link"
+            href="mailto:facundo.samela@gmail.com?subject=Contacto%20desde%20el%20portfolio"
+            ><h2 class="contact-title reveal" id="contact-title">
+              HAGAMOS<br />QUE <span>PASE.</span
+              ><span class="contact-arrow" aria-hidden="true">↗</span>
+            </h2></a
+          >
+          <div class="contact-bottom reveal">
+            <a class="contact-email" href="mailto:facundo.samela@gmail.com"
+              >Escribime por email <span aria-hidden="true">↗</span></a
+            ><button
+              class="copy-email"
+              id="copy-email"
+              type="button"
+              data-email="facundo.samela@gmail.com"
+            >
+              Copiar email <span aria-hidden="true">⧉</span>
+            </button>
+            <div class="contact-socials">
+              <a
+                href="https://www.instagram.com/facusam_/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram ↗</a
+              ><a
+                href="https://github.com/20FacuSam23"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub ↗</a
+              ><a
+                href="https://www.linkedin.com/in/facundo-samela-arag%C3%B3n-899026100/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn ↗</a
+              >
+            </div>
+          </div>
+          <p
+            class="copy-status sr-only"
+            id="copy-status"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer section-shell">
+      <a class="footer-signature" href="#inicio">Facu <span>↗</span></a>
+      <p>© <span id="year">2026</span> Facundo Aragón</p>
+      <a href="#inicio">VOLVER ARRIBA <span aria-hidden="true">↑</span></a>
+    </footer>
+    <dialog
+      class="project-dialog"
+      id="project-dialog"
+      aria-labelledby="dialog-title"
+    >
+      <div class="dialog-content">
+        <button
+          class="dialog-close"
+          id="dialog-close"
+          type="button"
+          aria-label="Cerrar detalle del proyecto"
+        >
+          ×
+        </button>
+        <p class="eyebrow" id="dialog-eyebrow"></p>
+        <h2 id="dialog-title"></h2>
+        <p class="dialog-description" id="dialog-description"></p>
+        <ul class="skill-list" id="dialog-stack"></ul>
+        <p class="dialog-note" id="dialog-note"></p>
+        <div class="dialog-actions" id="dialog-actions"></div>
+      </div>
+    </dialog>
+    <noscript
+      ><style>
+        .motion-toggle,
+        .filters,
+        .copy-email,
+        .menu-toggle {
+          display: none;
+        }
+        .site-header {
+          height: auto;
+          flex-wrap: wrap;
+          padding-block: 18px;
+        }
+        .navigation {
+          display: flex !important;
+          position: static;
+          flex-direction: row;
+          flex-wrap: wrap;
+          width: 100%;
+          padding: 0;
+          max-height: none;
+        }
+        .navigation a {
+          font-size: 13px;
+          padding: 4px;
+        }
+        .project-cover {
+          cursor: default;
+        }
+      </style>
+      <div class="noscript-note section-shell">
+        Podés explorar el código de los proyectos en
+        <a href="https://github.com/20FacuSam23">GitHub</a>. Las animaciones y
+        los detalles interactivos necesitan JavaScript.
+      </div></noscript
+    >
+  
+<script defer src="assets/portal-privacy-consent.js" data-portal="portfolio"></script>
+
+<script defer src="https://20facusam23.github.io/portfolio/datalisting-grid/grid.js?v=20261031-2" data-dg-site="portfolio"></script>
+</body>
+</html>
